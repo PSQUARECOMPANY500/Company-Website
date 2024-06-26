@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.landing-page-container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #ECE7E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+.landing-page-container h1 {
+  font-size: 10vw;
+  line-height: 11vw;
+  text-align: center;
+  font-weight: 700;
+  color: #ECE7E1;
+  z-index: 999;
+  opacity: 0;
+
+
+}
+
+.industy-content-container p {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2.2vw;
+  color: #000000;
+  letter-spacing: 1px;
+  font-size: 1.2vw;
+  white-space: nowrap;
+  margin-top: 1.5rem;
+
+}
+
+.founders-img-card {
+  width: 20vw;
+  height: 25vw;
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 0 #00000066;
+
+}
+
+.intro-container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #ECE7E1;
+
+
+}
+
+.intro-container-overlay {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+
+}
+
+.intro-heading-wrapper h1 {
+  font-size: 9vw;
+  line-height: 8.85vw;
+  color: #000000DE;
+  font-weight: 500;
+  position: relative;
+  z-index: 9;
+  white-space: nowrap;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.intro-heading-wrapper {
+  margin-left: 5rem;
+  position: absolute;
+  top: 10%;
+}
+
+.intro-pera-wrapper {
+  position: absolute;
+  bottom: 25%;
+  margin-left: 5rem;
+
+}
+
+.intro-pera-wrapper p {
+  font-size: 3vw;
+  color: #000000;
+  opacity: 1;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+}
+
+.intro-sub-pera-wrapper {
+  position: absolute;
+  right: 1%;
+  margin-top: 0.5rem;
+}
+
+.intro-sub-pera-wrapper p {
+  font-size: 2.5vw;
+  font-style: italic;
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.home-story-container {
+  height: 100vh;
+  width: 100%;
+  background-color: #FFFFFF;
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+
+
+}
+
+/* .home-card-crouser {
+  height: 100%;
+  width: 100%;
+  padding: 0 5rem;
+  position: absolute;
+  top: 17%;
+  left: 0;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+align-items: center;
+
+
+
+
+} */
+
+.crouser-card {
+  width: 38vw;
+  height: 26vw;
+  gap: 0px;
+  background-color: #95928e21;
+  box-shadow: 0px 0px 10px rgb(180, 178, 178);
+  border-radius: 52px;
+  color: black;
+  opacity: 0px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  padding: 10px 55px;
+
+
+
+}
+
+.bg-svg-wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.sub-svg-wrapper {
+  position: relative;
+  top: 15%;
+}
+.sub-svg-wrapper-ind{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+ 
+}
+.bg-svg {
+  position: relative;
+  scale: 1.2;
+  width: 100vw;
+
+
+}
+.bg-svg-ind,.bg-svg-ind2{
+  position: absolute;
+  top: 20%;
+  left: 3%;
+  scale: 1.2;
+}
+
+
+
+.scroll-section-inner {
+  height: 75vh;
+  width: 300vw;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+
+
+}
+
+.scroll-section {
+  height: 75vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-section-five {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.home-section-five-bg-line-container {
+  height: 20vh;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+
+
+
+}
+
+.home-section-five-bg {
+  height: 100%;
+  width: 100%;
+  background-color: #330152;
+  position: relative;
+}
+
+.section-five-card {
+  height: 21vw;
+  width: 18vw;
+  background-color: #f3f1ef93;
+  box-shadow: 0px 0px -20px 0px #95928E80;
+  border-radius: 50px;
+  position: relative;
+  top: 0;
+
+}
+
+.section-five-card-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: absolute;
+  top: 26%;
+  padding: 2rem;
+
+}
+
+.home-section-five-heading {
+  display: flex;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10%;
+}
+
+.home-section-five-heading h1 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 3vw;
+  white-space: nowrap;
+
+}
+
+.home-section-five-pera-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 5%;
+  position: absolute;
+  color: #000000;
+
+}
+
+.home-section-five-pera-wrapper p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 2.2vw;
+  text-align: center;
+  color: #000000;
+}
+
+.founders {
+  height: 100vh;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+.founders-pera-wrapper p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2vw;
+  line-height: 2.2vw;
+  color: #000000DE;
+  text-align: center;
+  letter-spacing: 2px;
+
+}
+
+.founder-heading-wrapper h1 {
+  font-size: 3vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #000000DE;
+
+}
+
+.our-expertise {
+  height: 100vh;
+  width: 100%;
+  background-color: #ECE7E1;
+  position: relative;
+}
+
+.expertise-card{
+  height: 19vw;
+  width: 16vw;
+  background-color: #F3F1EF4D;
+  box-shadow: 0px 0px 20px 0 #909090;
+  border-radius: 50px;
+
+}
+
+.expertise-card-container{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+  z-index: 9;
+}
+.expertise-card-container-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.expertise-card-container-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.map-container{
+  height: 100vh;
+  width: 100%;
+  background-color: #ECE7E1;
+  padding: 2rem;
+}
+
+.map-heading-wrapper h1{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 2.2vw;
+  font-size: 3vw;
+}
+
+.map-heading-wrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+}
+.map-img-container{
+  height: 85%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+ 
+}
+
+.map-img{
+  width:80vw;
+  height: 40vw;
+
+}
+
+.product-container{
+  height: 100vh;
+  width:100%;
+  background-color: #ECE7E1;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.product-cards-container{
+  height: 20vh;
+  width: 100%;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: space-around;
+background-color: #330152;
+}
+
+.product-card{
+  height: 19vw;
+  width: 19vw;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 0px #909090;
+
+
+}
+.story-container{
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+
+
+}
+
+.story-bg-img{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+}
+
+.bg-story{
+  height: 100%;
+  width: 100%;
+  
+}
+
+/* Small devices (phones, less than 600px) */
+@media only screen and (max-width: 599px) {}
+
+/* Medium devices (tablets, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .sub-svg-wrapper {
+    position: relative;
+    top: 10%;
+  }
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .sub-svg-wrapper {
+    position: relative;
+    top: 4%;
+  }
+  .bg-svg-ind1,.bg-svg-ind2{
+  scale: 1;
+  }
+}
+
+/* Extra large devices (large desktops, 1440px and up) */
+@media only screen and (min-width: 1440px) {}
+
+/* For all desktop view sizes */
+@media only screen and (min-width: 1024px) {}
