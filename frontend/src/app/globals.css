@@ -1,10 +1,45 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html,body{
+html,
+body {
     height: 100%;
     width: 100%;
+    user-select: none;
+}
+
+
+.nav-container {
+    height: 100px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav-inner-container {
+    width: 60%;
+    background-color: #F3F1EF4D;
+    height: 80px;
+    border-radius: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.nav-inner-container h1 {
+    color: #330152;
+    font-size: 1.2vw;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    cursor: pointer;
 }

@@ -92,10 +92,22 @@ window.addEventListener('resize', () => {
 
       </div>
       <div className='section-five-card-container' >
-        <div className='section-five-card one' ></div>
-        <div className='section-five-card two'></div>
-        <div className='section-five-card three' ></div>
-        <div className='section-five-card four'></div>
+        <div className='section-five-card one' >
+          <h1>05+</h1>
+          <p>Years in Business</p>
+        </div>
+        <div className='section-five-card two'>
+          <h1>150+</h1>
+          <p>Projects Delivered</p>
+        </div>
+        <div className='section-five-card three' >
+          <h1>100+</h1>
+          <p>Team Members</p>
+        </div>
+        <div className='section-five-card four'>
+          <h1>10+</h1>
+          <p>Countries Served</p>
+        </div>
       </div>
 
       <div className='home-section-five-pera-wrapper'>

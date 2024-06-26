@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useRef } from 'react'
 import './home.css'
 import LandingPage from './landingPage'
 import HomePageIntro from './homePageIntro'
@@ -11,20 +11,47 @@ import OurExpertise from './OurExpertise'
 import WorldMap from './WorldMap'
 import Product from './Product'
 import Story from './Story'
+import Contact from './Contact'
+import logo from "../../../../public/Images/logoDraw.png"
+import Image from 'next/image'
+
 
 const homePage = () => {
+  const contactRef=useRef();
+  const produtref=useRef();
+
+  const scrollToRef = () => {
+      contactRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  };
+  const scrollToProd = () => {
+      produtref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
   return (
     <div  >
-<LandingPage/>
-<HomePageIntro/>
-<HomeStory/>
-<Expertise/>
-<Industry/>
-<Founders/>
-<OurExpertise/>
-<WorldMap/>
-< Product/>
-<Story/>
+         <div className='nav-container' style={{position:'fixed',zIndex:'99'}}>
+        <div className="nav-inner-container">
+
+      <h1 onClick={scrollToRef}>contact us</h1>
+        <Image src={logo} alt='logo psqr' height={60} width={53}/>
+        <h1 onClick={scrollToProd}>Our Products</h1>
+        </div>
+    </div>
+      <LandingPage />
+      <HomePageIntro />
+      <HomeStory />
+      <Expertise />
+      <Industry />
+      <Founders />
+      <OurExpertise />
+      <WorldMap />
+      <div ref={produtref}></div>
+      < Product />
+      <Story />
+      <div ref={contactRef} >
+
+      <Contact/>
+      </div>
     </div>
   )
 }

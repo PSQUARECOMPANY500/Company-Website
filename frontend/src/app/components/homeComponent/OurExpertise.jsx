@@ -1,9 +1,18 @@
 import React from 'react'
+import ReactNative from '../../../../public/Images/ReactNativeImg.png'
+import Flutter from '../../../../public/Images/FlutterImg.png'
+import JavaImg from '../../../../public/Images/JavaImg.png'
+import KotlinImg from '../../../../public/Images/KotlinImg.png'
+import MongoImg from '../../../../public/Images/MongoImg.png'
+import ExpressImg from '../../../../public/Images/ExpressImg.png'
+import NodeImg from '../../../../public/Images/NodeImg.png'
+import Image from 'next/image'
+
 
 const OurExpertise = () => {
     return (
         <div className='our-expertise' style={{overflow:'hidden'}}>
-            <div className='ouhr-expertise-heading-wrapper'>
+            <div className='our-expertise-heading-wrapper'>
                 <h1>Our Expertise</h1>
             </div>
 
@@ -18,23 +27,50 @@ const OurExpertise = () => {
             </div>
 
             <div className='expertise-card-container'>
-              <div className='expertise-card-container-top'>
-                <div className='expertise-card'></div>
-                <div className='expertise-card'></div>
-                <div className='expertise-card'></div>
-                <div className='expertise-card'></div>
-              </div>
-              <div className='expertise-card-container-bottom'>
-                <div className='expertise-card'></div>
-                <div className='expertise-card'></div>
-                <div className='expertise-card'></div>
-                <div className='expertise-card'></div>
-              </div>
-        
+                <div className='expertise-card-container-top'>
+                    <div className='expertise-card'>
+                        <Image src={ReactNative} alt='psqr  native' className='product-img'/>
+                        <h5>React <br/> Native</h5>
+                    </div>
+                    <div className='expertise-card'>
+                        <Image src={Flutter} alt='psqr flutter'  className='product-img' />
+                        <h5>Flutter</h5>
+                    </div>
+                    <div className='expertise-card'>
+                        <Image src={JavaImg} alt='psqr  java'  className='product-img' />
+                        <h5>Java</h5>
+                    </div>
+                    <div className='expertise-card'>
+                        <Image src={KotlinImg} alt='psqr  Kotlin'  className='product-img'/>
+                        <h5>Kotlin</h5>
+                    </div>
+                </div>
+                <div className='expertise-card-container-bottom'>
+                    <div className='expertise-card'>
+                        <Image src={MongoImg} alt='psqr Mongo db'  className='product-img' />
+                        <h5>Mongo <br/> db</h5>
+
+                    </div>
+                    <div className='expertise-card'>
+                        <Image src={ExpressImg} alt='psqr Express'  className='product-img'/>
+                        <h5>Express <br/>.Js</h5>
+
+                    </div>
+                    <div className='expertise-card'>
+                        <Image src={NodeImg} alt='psqr Express'  className='product-img'/>
+                        <h5>Node<br/>.Js</h5>
+                    </div>
+                    <div className='expertise-card'>
+                        <Image src={ReactNative} alt='psqr Express'  className='product-img' />
+                        <h5> React<br/>.Js</h5>
+
+                    </div>
+                </div>
+
             </div>
 
 
-         
+
 
 
 

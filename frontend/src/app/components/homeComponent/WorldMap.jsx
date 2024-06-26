@@ -6,12 +6,10 @@ const WorldMap = () => {
   return (
     <div className='map-container'>
       <div className='map-heading-wrapper'>
-
         <h1>Our clients are global and so are we</h1>
       </div>
 
-      <div className='map-img-container'>
-        
+      <div className='map-img-container'>  
         <Image
         src={mapImg}
         alt='psqr map'
