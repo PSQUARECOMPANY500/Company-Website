@@ -28,8 +28,15 @@ const ContactUsSchema = new mongoose.Schema(
 
 ContactUsSchema.post("save", async (doc, next) => {
   try {
-    await mailSender(`PSQUARE COMPANY <${process.env.EmailAddress}>`, "You got the email", doc.email, "Contact Us");
-    await mailSender(doc.email, "You got the email", process.env.EmailAddress, "Contact Us");
+    // await mailSender(`PSQUARE COMPANY <${process.env.EmailAddress}>`, "You got the email", doc.email, "Contact Us");
+    const message = `
+    from: ${doc.email},<br>
+    fullName: ${doc.name}<br>
+    projectDesc: ${doc.projectDesc}<br>
+    budget: ${doc.budget}
+  `
+
+    await mailSender(doc.email, message, process.env.EmailAddress, "Contact Us");
     next();
   } catch (error) {
     console.log(error);
