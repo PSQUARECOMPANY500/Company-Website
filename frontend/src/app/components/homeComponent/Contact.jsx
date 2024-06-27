@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import TextInputs from '../reusbleComponent/TextInputs'
 import Logo from '../../../../public/Images/logo.png'
-import Facebook from '../../../../public/Images/facebook.png'
+// import Facebook from '../../../../public/Images/facebook.png'
 import Instagram from '../../../../public/Images/Instagram.png'
 import Twitter from '../../../../public/Images/twitter.png'
 import Linkden from '../../../../public/Images/linkden.png'
+import youtube from '../../../../public/Images/youtube.png'
 import MessageIcon from '../../../../public/Images/MessageIcon.png'
 import MessageIcon2 from '../../../../public/Images/MessageIcon2.png'
-
+import Link from 'next/link'
 import Image from 'next/image'
 import axios from 'axios'
 
@@ -154,10 +155,19 @@ const Contact = () => {
       <div className='contact-bottom'>
         <Image src={Logo} alt='psqr logo' height={30} />
         <div className='icons-container'>
-          <Image src={Facebook} alt='psqr logo facebook' className='icon' height={25} />
-          <Image src={Instagram} alt='psqr logo instagram' className='icon' height={25} />
+      <Link href='https://www.youtube.com/@PSQUARECOMPANY'>
+      <Image src={youtube} alt='psqr logo facebook' className='icon' height={25} style={{cursor:'pointer'}}/></Link>
+
+       <Link href='https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fpsquarecompany%2F&is_from_rle'>
+       <Image src={Instagram} alt='psqr logo instagram' className='icon' height={25} /></Link>
+      
+
+       <Link href=' https://www.linkedin.com/company/psquare-company/'>
           <Image src={Linkden} alt='psqr logo linkden' className='icon' height={25} />
+       </Link>
+       <Link href='https://x.com/i/flow/login?redirect_after_login=%2FPSQAURECOMPANY'>
           <Image src={Twitter} alt='psqr logo twitter' className='icon' height={25} />
+       </Link>
 
         </div>
       </div>
