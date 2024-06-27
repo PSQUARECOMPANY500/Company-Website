@@ -206,7 +206,7 @@ export default function Home() {
           stagger: 0.2,
           scrollTrigger: {
             trigger: '.intro-container-overlay',
-            start: "top top",
+            start: "2% top",
             end: `bottom -440%`,
             scrub: 2,
             pin: true, 

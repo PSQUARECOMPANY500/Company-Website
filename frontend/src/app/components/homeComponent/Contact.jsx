@@ -71,7 +71,7 @@ const Contact = () => {
         <div className='flex'>
 
           <TextInputs
-            label={'FullName'}
+            label={'Full Name'}
             name={'firstName'}
             onFocus={handleClick}
             value={userData.firstName}
