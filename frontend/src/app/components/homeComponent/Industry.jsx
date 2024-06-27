@@ -3,7 +3,7 @@ import React from 'react'
 
 const Industry = () => {
   return (
-    <div className='industry' style={{ height: '100vh', width: '100%', backgroundColor: '#ECE7E1', display: 'flex', alignItems: 'center', justifyContent: 'space-around', flexDirection: 'column' }}>
+    <div className='industry' style={{ minHeight: '130vh', width: '100%', backgroundColor: '#ECE7E1', display: 'flex', alignItems: 'center', justifyContent: 'space-around', flexDirection: 'column' }}>
       <div className='industry-video-container' style={{ width: '90%', height: '45vh', position: 'relative', }}>
         <video
           width="100%"

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import ArmaansSirImage from '../../../../public/Images/armaansir.png'
+import prabhSir from '../../../../public/Images/prabhSir.jpg'
 import rotateone from '../../../../public/Images/rotate1.png'
 import rotatetwo from '../../../../public/Images/rotate2.png'
 
@@ -16,9 +17,9 @@ const Founders = () => {
 
             }}>
                 <div className='founders-img-card'>
-                    <Image src={ArmaansSirImage} alt='ceo of psqr' className='founders-img' />
+                    <Image src={prabhSir} alt='ceo of psqr' className='founders-img' />
                     <div className='founders-name-container'>
-                        <h5>Prabhsimran Singh​</h5>
+                        <h5>Prabhjot Singh​​</h5>
                         <p>Co-Founder & CEO</p>
                     </div>
 
@@ -27,7 +28,7 @@ const Founders = () => {
                     <Image src={ArmaansSirImage} alt='ceo of psqr' className='founders-img' />
                     <div className='founders-name-container'>
                         <h5>Prabhsimran Singh​</h5>
-                        <p>Co-Founder & CEO</p>
+                        <p>Co-Founder </p>
                     </div>
 
                 </div>

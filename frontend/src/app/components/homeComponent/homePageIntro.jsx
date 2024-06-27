@@ -9,7 +9,9 @@ const homePageIntro = () => {
       <div className='intro-container-overlay'>
 
         <div className='intro-heading-wrapper'>
-            <h1 className='simplify'>Simplifying <br/><span className='heading-span'>Business Softwares</span></h1>
+            <h1 >
+           Simplifying
+              <br/><span className='heading-span'>Business Softwares</span></h1>
         </div>
         <div className='intro-pera-wrapper'>
             <p className='intropera'>“ Software is meant to make our lives simpler, not complex <span>“</span></p>

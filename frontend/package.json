@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "axios": "^1.7.2",
     "css-loader": "^7.1.2",
     "framer-motion": "^11.2.11",
     "gsap": "^3.12.5",

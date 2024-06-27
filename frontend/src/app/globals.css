@@ -9,6 +9,7 @@ body {
     height: 100%;
     width: 100%;
     user-select: none;
+  
 }
 
 
@@ -21,17 +22,22 @@ body {
     align-items: center;
     justify-content: center;
 
+
 }
 
 .nav-inner-container {
-    width: 60%;
+    width: 85px;
     background-color: #F3F1EF4D;
-    height: 80px;
-    border-radius: 200px;
+    height: 85px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
+    justify-content: center;
+    backdrop-filter: blur(100px);
+    transition: 0.5s ease;
+    cursor: pointer;
+    position: relative;
+
 }
 
 .nav-inner-container h1 {
@@ -39,7 +45,38 @@ body {
     font-size: 1.2vw;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
+
     font-weight: 500;
     font-style: normal;
     cursor: pointer;
+    text-transform: capitalize;
+    display: none;
+    transition: 0.8s ease;
+    position:absolute;
+    white-space: nowrap;
+
+}
+
+.nav-inner-container h1:nth-child(1){
+    left: 20%;
+}
+.nav-inner-container h1:last-child{
+    left: 70%;
+}
+.nav-inner-container:hover {
+    width: 60%;
+    border-radius: 200px;
+    padding: 2rem 7rem;
+   
+
+}
+
+.psqr-logo{
+    position: absolute;
+    transform: translateX(2.1px);
+}
+
+
+.nav-inner-container:hover h1 {
+    display: initial;
 }

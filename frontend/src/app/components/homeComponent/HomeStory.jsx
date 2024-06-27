@@ -48,6 +48,7 @@ gsap.from('.bg-svg-wrapper', {
   }, []);
   return (
     <div className='home-story-container' ref={triggerRef}>
+      {/* <h1 className='simplify'>Simplifying</h1> */}
       <div className='bg-svg-wrapper'>
         <div className='sub-svg-wrapper'>
           <svg height="585" viewBox="0 0 1728 585" fill="none" xmlns="http://www.w3.org/2000/svg" className='bg-svg'>

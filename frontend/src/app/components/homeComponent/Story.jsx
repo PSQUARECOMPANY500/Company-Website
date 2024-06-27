@@ -23,9 +23,9 @@ const Story = () => {
         <div className='story-card-container'>
           <div className='story-card-inner-container'>
             <div className='stroy-card'>
-              <p>Partnering with PSQUARE COMPNAY  has been a game-changer for our business. Their innovative solutions and dedicated support have propelled our company forward. We have seen a 30% increase in productivity and a significant reduction in IT-related issues. Their team is always responsive and goes above and beyond to ensure our success."
+              <p>We are thrilled with the outstanding work provided by PSQUARE COMPANY . Their expertise and attention to detail have significantly improved our operations. The team was professional, efficient, and delivered beyond our expectations. We highly recommend their services to anyone looking for exceptional quality and service. Thank you, PSQUARE COMPANY, for your excellent work!""
               </p>
-              <h5>~John Doe, CEO of Tech Innovators</h5>
+              <h5>~Mr. Rajinder Mohan Singh</h5>
             </div>
             {/* <div className='stroy-card story-card2'>
               <p>Partnering with PSQUARE COMPNAY  has been a game-changer for our business. Their innovative solutions and dedicated support have propelled our company forward. We have seen a 30% increase in productivity and a significant reduction in IT-related issues. Their team is always responsive and goes above and beyond to ensure our success."
@@ -44,9 +44,9 @@ const Story = () => {
             </div> */}
           </div>
 
-          <div className='stroy-card-progress'>
+          {/* <div className='stroy-card-progress'>
             <div className='story-card-progress-overlay'></div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

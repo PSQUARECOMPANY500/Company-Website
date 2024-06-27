@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import './home.css'
 import LandingPage from './landingPage'
 import HomePageIntro from './homePageIntro'
@@ -20,6 +20,7 @@ const homePage = () => {
   const contactRef=useRef();
   const produtref=useRef();
 
+
   const scrollToRef = () => {
       contactRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
 
@@ -33,8 +34,8 @@ const homePage = () => {
         <div className="nav-inner-container">
 
       <h1 onClick={scrollToRef}>contact us</h1>
-        <Image src={logo} alt='logo psqr' height={60} width={53}/>
-        <h1 onClick={scrollToProd}>Our Products</h1>
+        <Image src={logo} alt='logo psqr' height={53} width={53} className='psqr-logo'/>
+        <h1 onClick={scrollToProd} >Our Products</h1>
         </div>
     </div>
       <LandingPage />

@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import styles from "./page.module.css";
-import locomotiveScroll from 'locomotive-scroll'
+// import locomotiveScroll from 'locomotive-scroll'
 import { useRef, useEffect } from 'react'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,6 +9,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
 
 import HomePage from "./components/homeComponent/homePage";
+import dynamic from 'next/dynamic';
+
+
+const LocomotiveScroll = dynamic(() => import('locomotive-scroll'), { ssr: false });
 
 
 
@@ -24,19 +28,34 @@ export default function Home() {
   const scrollRef = useRef(null);
   const hRef = useRef();
 
+  // useEffect(() => {
+  //   scrollRef.current = new locomotiveScroll({
+  //     el: document.querySelector('#main'),
+  //     smooth: true,
+  //   });
+
+  //   return () => {
+  //     if (scrollRef.current) {
+  //       scrollRef.current.destroy();
+  //     }
+  //   };
+  // }, []);
   useEffect(() => {
-    scrollRef.current = new locomotiveScroll({
-      el: document.querySelector('#main'),
-      smooth: true,
-    });
+    let locomotiveScroll;
+
+    if (typeof window !== 'undefined') {
+      import('locomotive-scroll').then((LocomotiveScroll) => {
+        locomotiveScroll = new LocomotiveScroll.default({
+          el: document.querySelector('[data-scroll-container]'),
+          smooth: true,
+        });
+      });
+    }
 
     return () => {
-      if (scrollRef.current) {
-        scrollRef.current.destroy();
-      }
+      if (locomotiveScroll) locomotiveScroll.destroy();
     };
   }, []);
-
 
   useGSAP(
     () => {
@@ -115,19 +134,23 @@ export default function Home() {
         }
       })
 
-      gsap.to('.intro-container-overlay', {
-        duration: 1,
-        ease: "power1.out",
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: '.intro-container-overlay',
-          start: "top top",
-          end: `bottom top`,
-          scrub: 2,
-          pin: true,
+      // gsap.to('.intro-container-overlay', {
+      //   duration: 1,
+      //   ease: "power1.out",
+      //   stagger: 0.2,
+      //   scrollTrigger: {
+      //     trigger: '.intro-container-overlay',
+      //     start: "top top",
+      //     end: `bottom top`,
+      //     scrub: 2,
+      //     pin: true, 
+          
+      //   },
+      // })
 
-        },
-      })
+
+ 
+
 
       gsap.to('.introsubpera', {
         duration: 1,
@@ -168,12 +191,47 @@ export default function Home() {
           start: "top 72%",
           end: 'top 40%',
           scrub: 2,
-    
+
         },
-      },);
+      });
 
 
 
+      let mm = gsap.matchMedia();
+
+      mm.add("(min-width: 1024px) and (max-width: 1439px) ", () => {
+        gsap.to('.intro-container-overlay', {
+          duration: 1,
+          ease: "power1.out",
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: '.intro-container-overlay',
+            start: "top top",
+            end: `bottom -440%`,
+            scrub: 2,
+            pin: true, 
+            
+          },
+        })
+  
+      });
+
+      mm.add("(min-width: 1440px)", () => {
+        gsap.to('.intro-container-overlay', {
+          duration: 1,
+          ease: "power1.out",
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: '.intro-container-overlay',
+            start: "top top",
+            end: `bottom -330%`,
+            scrub: 2,
+            pin: true, 
+            
+          },
+        })
+  
+      });
 
 
 
