@@ -29,39 +29,39 @@ const OurExpertise = () => {
             <div className='expertise-card-container'>
                 <div className='expertise-card-container-top'>
                     <div className='expertise-card'>
-                        <Image src={ReactNative} alt='psqr  native' className='product-img'/>
+                        <Image src={ReactNative} alt='psqr  native' className='expertise-img'/>
                         <h5>React <br/> Native</h5>
                     </div>
                     <div className='expertise-card'>
-                        <Image src={Flutter} alt='psqr flutter'  className='product-img' />
+                        <Image src={Flutter} alt='psqr flutter'  className='expertise-img' />
                         <h5>Flutter</h5>
                     </div>
                     <div className='expertise-card'>
-                        <Image src={JavaImg} alt='psqr  java'  className='product-img' />
+                        <Image src={JavaImg} alt='psqr  java'  className='expertise-img' />
                         <h5>Java</h5>
                     </div>
                     <div className='expertise-card'>
-                        <Image src={KotlinImg} alt='psqr  Kotlin'  className='product-img'/>
+                        <Image src={KotlinImg} alt='psqr  Kotlin'  className='expertise-img'/>
                         <h5>Kotlin</h5>
                     </div>
                 </div>
                 <div className='expertise-card-container-bottom'>
                     <div className='expertise-card'>
-                        <Image src={MongoImg} alt='psqr Mongo db'  className='product-img' />
+                        <Image src={MongoImg} alt='psqr Mongo db'  className='expertise-img' />
                         <h5>Mongo <br/> db</h5>
 
                     </div>
                     <div className='expertise-card'>
-                        <Image src={ExpressImg} alt='psqr Express'  className='product-img'/>
+                        <Image src={ExpressImg} alt='psqr Express'  className='expertise-img'/>
                         <h5>Express <br/>.Js</h5>
 
                     </div>
                     <div className='expertise-card'>
-                        <Image src={NodeImg} alt='psqr Express'  className='product-img'/>
+                        <Image src={NodeImg} alt='psqr Express'  className='expertise-img'/>
                         <h5>Node<br/>.Js</h5>
                     </div>
                     <div className='expertise-card'>
-                        <Image src={ReactNative} alt='psqr Express'  className='product-img' />
+                        <Image src={ReactNative} alt='psqr Express'  className='expertise-img' />
                         <h5> React<br/>.Js</h5>
 
                     </div>

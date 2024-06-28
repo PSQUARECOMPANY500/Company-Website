@@ -1,21 +1,17 @@
 import Image from 'next/image'
 import React from 'react'
-import ArmaansSirImage from '../../../../public/Images/armaansir.png'
+import ArmaansSirImage from '../../../../public/Images/armaansir.jpg'
 import prabhSir from '../../../../public/Images/prabhSir.jpg'
 import rotateone from '../../../../public/Images/rotate1.png'
 import rotatetwo from '../../../../public/Images/rotate2.png'
 
 const Founders = () => {
     return (
-        <div className='founders' style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', flexDirection: 'column' }}>
+        <div className='founders'>
             <div className='founder-heading-wrapper' >
                 <h1>Founders</h1>
             </div>
-            <div className='founders-image-container' style={{
-                display: 'flex',
-                gap: '10rem',
-
-            }}>
+            <div className='founders-image-container' >
                 <div className='founders-img-card'>
                     <Image src={prabhSir} alt='ceo of psqr' className='founders-img' />
                     <div className='founders-name-container'>
@@ -39,14 +35,14 @@ const Founders = () => {
                     src={rotateone}
                     alt='psqr text'
                     className='rotate'
-                style={{marginLeft:'-4rem',marginBottom:'-2rem'}}
+             
                 />
                 <h2>We persevere until we attain perfection</h2>
                 <Image
                     src={rotatetwo}
                     alt='psqr text'
-                    className='rotate'
-                    style={{position: 'absolute',right:0,marginRight:'-4rem',marginTop:'-1rem'}}
+                    className='rotate rotate2'
+
                 />
                 <h4 >~ Prabhsimran Singh, Co-founder</h4>
             </div>

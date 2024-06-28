@@ -1,5 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+'use client'
+import React, { useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
+
 
 const TextInputs = ({
   type = 'text',
@@ -19,33 +21,34 @@ const TextInputs = ({
   zIn='0',
   valid=true,
   isSmall=false,
+  isBig=false,
   
 
 }) => {
-  // // const DynamicPlayer = dynamic(() => import('@lordicon/react').then(mod => mod.Player), { ssr: false })
-
-  // // const playerRef = useRef(null);
- 
 
 
-  // const handleMouseEnter = () => {
-  //   if (!ICON) {
-  //     return;
-  //   }
-  //   playerRef.current?.playFromBeginning();
-  // };
+  const [mobileSize,setIsMobileSize]=useState(false);
 
 
-  // useEffect(() => {
-  //   if (!ICON) {
-  //     return;
-  //   }
-  //   playerRef.current?.playFromBeginning();
-  // }, [])
+  useEffect(()=>{
+    const checkMobileSize=()=>{
+  setIsMobileSize(window.innerWidth<=599)
+    }
+
+    checkMobileSize()
+
+    window.addEventListener('resize', checkMobileSize);
+
+    return ()=>{
+      window.removeEventListener('resize', checkMobileSize);
+    }
+  
+},[])
+
 
 
   return (
-    <div className="input-container" style={{ width: `${w}`, marginTop: '20px' }} onClick={handleCalendarOpen} >
+    <div className={isBig?'input-container big':'input-container'}style={{ width: `${w}`, marginTop: '20px' }} onClick={handleCalendarOpen} >
       <input
         className="input-field"
         type={type}
@@ -64,10 +67,10 @@ const TextInputs = ({
 
       <label htmlFor={name} className={'input-label'}
         style={{
-          top: click ? "-20px" : '-3px',
+          top: click ? mobileSize?'1px':"-20px" :mobileSize?'1px': '10px',
           // color: click ?"#330152" :!valid&&!click? '#CF352E':'',
           fontWeigh: click ? "500" : '500',
-          fontSize: click ? "0.7vw" : '1.1vw',
+          fontSize: click ? mobileSize?'16px':"0.7vw" :mobileSize? '16px': '1.1vw',
           zIndex: '999'
         }}
 

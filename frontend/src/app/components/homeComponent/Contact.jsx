@@ -3,6 +3,7 @@ import TextInputs from '../reusbleComponent/TextInputs'
 import Logo from '../../../../public/Images/logo.png'
 // import Facebook from '../../../../public/Images/facebook.png'
 import Instagram from '../../../../public/Images/Instagram.png'
+
 import Twitter from '../../../../public/Images/twitter.png'
 import Linkden from '../../../../public/Images/linkden.png'
 import youtube from '../../../../public/Images/youtube.png'
@@ -16,6 +17,7 @@ const Contact = () => {
   const [click, setClick] = useState({});
   const [loader, setLoader] = useState(false)
   const [userData, setUserData] = useState({})
+
   const handleClick = (e) => {
     const { name } = e.target;
     setClick({ ...click, [name]: true });
@@ -102,7 +104,8 @@ const Contact = () => {
           onChange={handlePersonalInputChange}
           click={click.project}
           onBlur={handleClickFalse}
-          w={'55rem'}
+          // w={'55rem'}
+          isBig={true}
 
         />
 
@@ -114,7 +117,7 @@ const Contact = () => {
 
               <h5 style={{ color: userData?.budget === '10-20k' && '#393939' }} >10-20K</h5>
             </div>
-            <div className='budget-card' onClick={() => setUserData({ ...userData, budget: '30-40k' })} style={{ backgroundColor: userData?.budget === '30-40k' && '#ffffff81', border: userData?.budget === '30-40k' && 'none' }}>
+            <div className='budget-card card-budget' onClick={() => setUserData({ ...userData, budget: '30-40k' })} style={{ backgroundColor: userData?.budget === '30-40k' && '#ffffff81', border: userData?.budget === '30-40k' && 'none' }}>
               <h5 style={{ color: userData?.budget === '30-40k' && '#393939' }}>30-40K</h5>
             </div>
             <div className='budget-card' onClick={() => setUserData({ ...userData, budget: '40-50k' })} style={{ backgroundColor: userData?.budget === '40-50k' && '#ffffff81', border: userData?.budget === '40-50k' && 'none' }}>

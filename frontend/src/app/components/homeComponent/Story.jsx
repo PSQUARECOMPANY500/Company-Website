@@ -21,9 +21,7 @@ const Story = () => {
         </div>
       
         <div className='story-card-container' >
-          <div className='story-card-inner-container' style={{display:'flex', alignItems:'center',
-          justifyContent:'space-between',gap:'2.5rem'
-        }}>
+          <div className='story-card-inner-container' >
             <div className='stroy-card'>
               <p>We are thrilled with the outstanding work provided by P Square . Their expertise and attention to detail have significantly improved our operations. The team was professional, efficient, and delivered beyond our expectations. We highly recommend their services to anyone looking for exceptional quality and service. Thank you,  P Square for your excellent work!""
               </p>
