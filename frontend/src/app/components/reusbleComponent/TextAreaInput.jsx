@@ -1,9 +1,9 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react';
+import dynamic from 'next/dynamic';
 
 
-
-const TextInputs = ({
+const TextAreaInput = ({
   type = 'text',
   name,
   label,
@@ -49,8 +49,8 @@ const TextInputs = ({
 
   return (
     <div className={isBig?'input-container big':'input-container'}style={{ width: `${w}`, marginTop: '20px' }} onClick={handleCalendarOpen} >
-      <input
-        className="input-field text-field"
+      <textarea
+        className="input-field textarea-field"
         type={type}
         name={name}
         id={name}
@@ -58,17 +58,17 @@ const TextInputs = ({
         onChange={onChange}
         readOnly={read}
         value={value}
-        style={{textAlign:!click&&'end',top:0,textOverflow:!click&&'ellipsis'}}
+        // style={{ opacity: '0' ,zIndex:`${zIn}`}}
         onFocus={onFocus}
         onBlur={onBlur}
         onKeyPress={onKeyPress}
-  
+        style={{resize:'none',marginTop:'30px',overflow:'hidden'}}
        
       />
 
       <label htmlFor={name} className={'input-label'}
         style={{
-          top: click ? mobileSize?'-10px':"-20px" :mobileSize?'17px': '-3px',
+          top: click ? mobileSize?'-10px':"-10px" :mobileSize?'1px': '-3px',
           // color: click ?"#330152" :!valid&&!click? '#CF352E':'',
           fontWeigh: click ? "500" : '500',
           fontSize: click ? mobileSize?'16px':"0.7vw" :mobileSize? '16px': '1.1vw',
@@ -93,4 +93,4 @@ const TextInputs = ({
   );
 };
 
-export default TextInputs;
+export default TextAreaInput

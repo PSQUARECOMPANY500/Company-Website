@@ -12,6 +12,7 @@ import MessageIcon2 from '../../../../public/Images/MessageIcon2.png'
 import Link from 'next/link'
 import Image from 'next/image'
 import axios from 'axios'
+import TextAreaInput from '../reusbleComponent/TextAreaInput'
 
 const Contact = () => {
   const [click, setClick] = useState({});
@@ -96,7 +97,7 @@ const Contact = () => {
         </div>
 
 
-        <TextInputs
+        {/* <TextInputs
           label={'Tell us about your project'}
           name={'project'}
           onFocus={handleClick}
@@ -107,6 +108,18 @@ const Contact = () => {
           // w={'55rem'}
           isBig={true}
 
+        /> */}
+
+        <TextAreaInput
+           label={'Tell us about your project'}
+           name={'project'}
+           onFocus={handleClick}
+           value={userData.project}
+           onChange={handlePersonalInputChange}
+           click={click.project}
+           onBlur={handleClickFalse}
+  
+           isBig={true}
         />
 
         <div className='project-budget-wrapper'>

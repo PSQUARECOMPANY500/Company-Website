@@ -216,7 +216,7 @@ export default function Home() {
           scrollTrigger: {
             trigger: '.intro-container-overlay',
             start: "top top",
-            end: `bottom -330%`,
+            end: `bottom -310%`,
             scrub: 2,
             pin: true,
 

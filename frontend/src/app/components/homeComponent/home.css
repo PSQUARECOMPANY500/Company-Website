@@ -111,11 +111,22 @@
   width: 100%;
   position: relative;
   background-color: #ECE7E1;
-  overflow: hidden;
+  /* overflow: hidden; */
+
 
 
 
 }
+
+/* .pin-overlay{
+  height: 440vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; 
+
+  
+} */
 
 .intro-container-overlay {
   min-height: 100vh;
@@ -123,6 +134,9 @@
   position: absolute;
   top: 0;
   left: 0;
+
+
+
 
 
 }
@@ -935,9 +949,24 @@ align-items: center;
   padding: 5px 0;
   background-color: transparent;
   outline: none;
+  text-transform: initial;
+  font-weight: 400;
+  overflow: hidden;
+  font-size: 1vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.91px;
+  line-height: 1vw;
+  color: #FFFFFF;
+
+
 
 }
 
+.text-field{
+  padding-top: 8px;
+}
 
 .input-label {
   position: absolute;
@@ -993,7 +1022,6 @@ align-items: center;
   top: -20px;
   font-size: 14px;
   font-weight: 500;
-
   opacity: 1;
 }
 
@@ -1094,7 +1122,6 @@ align-items: center;
 }
 
 .project-budget-wrapper h5 {
-
   color: #FFFFFF;
   font-size: 1vw;
   text-align: start;
@@ -1124,7 +1151,7 @@ align-items: center;
   line-height: 1.8vw;
   font-size: 1.5vw;
   cursor: pointer;
-  transition: 0.1s ease;
+
 
 }
 
@@ -1151,30 +1178,40 @@ align-items: center;
 
 .contact .but span {
   display: inline-block;
-  transition: 0.5s ease;
+
 }
 
 .msg-icon {
   opacity: 0;
   margin-left: -1rem;
+
+
 }
 
 .contact .but:hover {
   background-color: #ffffff81;
   color: #393939;
+  transition: 0.4s ease;
+
+
 }
 
 .contact .but:hover span {
   transform: translateX(-20px);
+  transition: 0.4s ease;
+  
 }
 
 .contact .but:hover .msg-icon {
   opacity: 1;
+  transition: 0.4s ease;
+
 }
 
 .msg-icon {
   position: absolute;
   margin-left: 0.1rem;
+
 }
 
 .contact-bottom {
@@ -1183,7 +1220,6 @@ align-items: center;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: -1.5rem;
-
 
 }
 
@@ -1821,10 +1857,15 @@ align-items: center;
     line-height: 15px;
   }
 
-  .input-container p {
+  .text-field{
     font-size: 12px;
-    top: 11px;
     line-height: 30px;
+    padding-top: 15px;
+  }
+
+  .textarea-field{
+    font-size: 12px;
+    line-height: 20px; 
   }
 
   /* .project-budget-wrapper{
@@ -1850,12 +1891,7 @@ align-items: center;
   }
 
   .card-budget{
-    display: none;
-
-
-
-
-    
+    display: none;  
   }
 
   .contact .but ,.but2{
@@ -1871,5 +1907,17 @@ align-items: center;
 
   .contact-bottom{
 width: 350px;
+  }
+.budget-card h5{
+  font-size: 12px;
+}
+  .budget-card:hover h5 {
+    font-size: 14px;
+    color: #393939;
+    font-weight: 500;
+  }
+
+  .project-budget-wrapper{
+    margin-top: 0;
   }
 }
