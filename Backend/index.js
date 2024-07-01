@@ -10,10 +10,16 @@ dotenv.config();
 
 const app = express();
 
+morgan.token('ip', function (req, res) {
+    return req.ip;
+});
+
+const format = ':ip - :method :url :status :response-time ms - :res[content-length]';
+
+app.use(morgan(format));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
-app.use(morgan('dev'));
 
 async function main() {
     try {

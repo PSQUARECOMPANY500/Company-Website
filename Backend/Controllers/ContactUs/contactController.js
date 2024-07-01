@@ -3,7 +3,6 @@ import ContactUs from "../../Modals/Contact/ContactUsSchema.js";
 const contactForm = async (req, res) => {
   try {
     const { name, email, projectDesc, budget } = req.body;
-    console.log(req.body);
 
     if (!name || !email || !projectDesc || !budget) {
       return res

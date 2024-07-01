@@ -39,7 +39,6 @@ ContactUsSchema.post("save", async (doc, next) => {
     await mailSender(doc.email, message, process.env.EmailAddress, "Contact Us");
     next();
   } catch (error) {
-    console.log(error);
     next(error);
   }
 });
