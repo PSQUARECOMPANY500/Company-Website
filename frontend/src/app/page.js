@@ -5,14 +5,14 @@ import styles from "./page.module.css";
 import { useRef, useEffect, useState } from 'react'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import { useGSAP } from '@gsap/react';
-
 import HomePage from "./components/homeComponent/homePage";
 import dynamic from 'next/dynamic';
 
 
+
 const LocomotiveScroll = dynamic(() => import('locomotive-scroll'), { ssr: false });
+
 
 
 
@@ -30,22 +30,32 @@ export default function Home() {
 
  
 
-  useEffect(() => {
-    let locomotiveScroll;
 
-    if (typeof window !== 'undefined') {
-      import('locomotive-scroll').then((LocomotiveScroll) => {
-        locomotiveScroll = new LocomotiveScroll.default({
-          el: document.querySelector('[data-scroll-container]'),
-          smooth: true,
-        });
-      });
-    }
 
-    return () => {
-      if (locomotiveScroll) locomotiveScroll.destroy();
-    };
-  }, []);
+    useEffect(() => {
+      let locomotiveScroll;
+  
+      const initLocomotiveScroll = async () => {
+        try {
+          const LocomotiveScrollModule = await import('locomotive-scroll');
+          locomotiveScroll = new LocomotiveScrollModule.default({
+            el: document.querySelector('#main'),
+            smooth: true,
+          });
+        } catch (error) {
+          console.error('Error importing LocomotiveScroll:', error);
+        }
+      };
+  
+      if (typeof window !== 'undefined') {
+        initLocomotiveScroll();
+      }
+  
+     
+      return () => {
+        if (locomotiveScroll) locomotiveScroll.destroy();
+      };
+    }, []);
 
  
   useGSAP(
@@ -216,7 +226,7 @@ export default function Home() {
           scrollTrigger: {
             trigger: '.intro-container-overlay',
             start: "top top",
-            end: `bottom -310%`,
+            end: `bottom -305%`,
             scrub: 2,
             pin: true,
 
@@ -235,6 +245,7 @@ export default function Home() {
   return (
     <main className={styles.main} id='main' ref={hRef}>
       <HomePage />
+
 
     </main>
   );

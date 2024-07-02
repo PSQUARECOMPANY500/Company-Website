@@ -10,7 +10,9 @@ const homePageIntro = () => {
 
         <div className='intro-heading-wrapper'>
             <h1 >
+           <span className='simple'>
            Simplifying
+           </span>
               <br/><span className='heading-span'>Business Softwares</span></h1>
         </div>
 
@@ -23,6 +25,8 @@ const homePageIntro = () => {
         </div>
   
       </div>
+
+
     </div>
   )
 }

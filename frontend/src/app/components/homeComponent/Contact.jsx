@@ -13,6 +13,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import axios from 'axios'
 import TextAreaInput from '../reusbleComponent/TextAreaInput'
+import Slider from '../commonComponent/Slider'
 
 const Contact = () => {
   const [click, setClick] = useState({});
@@ -187,6 +188,7 @@ const Contact = () => {
 
         </div>
       </div>
+
     </div>
   )
 }
