@@ -1,19 +1,11 @@
+'use client'
 import React, { useEffect, useState } from 'react'
 import TextInputs from '../reusbleComponent/TextInputs'
-import Logo from '../../../../public/Images/logo.png'
-// import Facebook from '../../../../public/Images/facebook.png'
-import Instagram from '../../../../public/Images/Instagram.png'
-
-import Twitter from '../../../../public/Images/twitter.png'
-import Linkden from '../../../../public/Images/linkden.png'
-import youtube from '../../../../public/Images/youtube.png'
-import MessageIcon from '../../../../public/Images/MessageIcon.png'
-import MessageIcon2 from '../../../../public/Images/MessageIcon2.png'
 import Link from 'next/link'
 import Image from 'next/image'
 import axios from 'axios'
 import TextAreaInput from '../reusbleComponent/TextAreaInput'
-import Slider from '../commonComponent/Slider'
+
 
 const Contact = () => {
   const [click, setClick] = useState({});
@@ -98,7 +90,8 @@ const Contact = () => {
         </div>
 
 
-        {/* <TextInputs
+
+        <TextAreaInput
           label={'Tell us about your project'}
           name={'project'}
           onFocus={handleClick}
@@ -106,21 +99,8 @@ const Contact = () => {
           onChange={handlePersonalInputChange}
           click={click.project}
           onBlur={handleClickFalse}
-          // w={'55rem'}
+
           isBig={true}
-
-        /> */}
-
-        <TextAreaInput
-           label={'Tell us about your project'}
-           name={'project'}
-           onFocus={handleClick}
-           value={userData.project}
-           onChange={handlePersonalInputChange}
-           click={click.project}
-           onBlur={handleClickFalse}
-  
-           isBig={true}
         />
 
         <div className='project-budget-wrapper'>
@@ -149,42 +129,40 @@ const Contact = () => {
 
       </div>
 
-      <button type='submit' onClick={submitHandler} className={loader?'but2':'but'}>
+      <button type='submit' onClick={submitHandler} className={loader ? 'but2' : 'but'}>
 
         {!loader ?
           <>
             <span className='msg1'>Send message </span>
-            <Image src={MessageIcon} alt='psqr logo' className='msg-icon' />
+            <Image src='/Images/MessageIcon.png' alt='psqr logo' className='msg-icon' height={35} width={35}/>
           </>
           :
           (
-          // <div className="modal">
-          //   <div className="loading-spinner mb-2"></div>
-          // </div>
-          <>
-          
-          <Image src={MessageIcon2} alt='psqr logo' className='msg-icon2' />
-          <span className='msg2'>Message Sent Successfully </span>
-          </>
+
+            <>
+
+              <Image ssrc='/Images/MessageIcon2.png' alt='psqr logo' className='msg-icon2' height={35} width={35} />
+              <span className='msg2'>Message Sent Successfully </span>
+            </>
           )}
 
       </button>
       <div className='contact-bottom'>
-        <Image src={Logo} alt='psqr logo' height={30} />
+        <Image src='/Images/logo.png' alt='psqr logo' height={32} width={130} />
         <div className='icons-container'>
-      <Link href='https://www.youtube.com/@PSQUARECOMPANY'>
-      <Image src={youtube} alt='psqr logo facebook' className='icon' height={25} style={{cursor:'pointer'}}/></Link>
+          <Link href='https://www.youtube.com/@PSQUARECOMPANY'>
+            <Image src='/Images/youtube.png' alt='psqr logo facebook' className='icon' height={25} width={25} style={{ cursor: 'pointer' }} /></Link>
 
-       <Link href='https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fpsquarecompany%2F&is_from_rle'>
-       <Image src={Instagram} alt='psqr logo instagram' className='icon' height={25} /></Link>
-      
+          <Link href='https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fpsquarecompany%2F&is_from_rle'>
+            <Image src='/Images/Instagram.png' alt='psqr logo instagram' className='icon' height={25} width={25} /></Link>
 
-       <Link href=' https://www.linkedin.com/company/psquare-company/'>
-          <Image src={Linkden} alt='psqr logo linkden' className='icon' height={25} />
-       </Link>
-       <Link href='https://x.com/i/flow/login?redirect_after_login=%2FPSQAURECOMPANY'>
-          <Image src={Twitter} alt='psqr logo twitter' className='icon' height={25} />
-       </Link>
+
+          <Link href=' https://www.linkedin.com/company/psquare-company/'>
+            <Image src='/Images/linkden.png' alt='psqr logo linkden' className='icon' height={25} width={25} />
+          </Link>
+          <Link href='https://x.com/i/flow/login?redirect_after_login=%2FPSQAURECOMPANY'>
+            <Image src='/Images/twitter.png' alt='psqr logo twitter' className='icon' height={25} width={25} />
+          </Link>
 
         </div>
       </div>

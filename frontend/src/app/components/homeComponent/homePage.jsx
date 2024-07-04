@@ -1,8 +1,8 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react'
 import './home.css'
-import LandingPage from './landingPage'
-import HomePageIntro from './homePageIntro'
+import LandingPage from './LandingPage'
+import HomePageIntro from './HomePageIntro'
 import HomeStory from './HomeStory'
 import Expertise from './Expertise'
 import Industry from './Industry'
@@ -19,16 +19,12 @@ import ScrollToTop from '../commonComponent/ScrollToTop'
 
 
 
-const homePage = () => {
+const HomePage = () => {
   const contactRef = useRef();
   const produtref = useRef();
   const homeIntroRef = useRef();
   const homeStoryRef = useRef();
-  const expertiseRef = useRef();
-  const industryRef = useRef();
-  const foundersRef = useRef();
   const ourExpertiseRef = useRef();
-  const worldMapRef = useRef();
   const storyRef = useRef();
   const landingpageRef = useRef();
   const [isVisible, setIsVisible] = useState({})
@@ -173,4 +169,4 @@ const homePage = () => {
   )
 }
 
-export default homePage
+export default HomePage

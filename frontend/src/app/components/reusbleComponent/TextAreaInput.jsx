@@ -1,6 +1,6 @@
 'use client'
-import React, { useEffect, useRef, useState } from 'react';
-import dynamic from 'next/dynamic';
+import React, { useEffect,  useState } from 'react';
+
 
 
 const TextAreaInput = ({
@@ -15,12 +15,7 @@ const TextAreaInput = ({
   click,
   onBlur,
   onFocus,
-  ICON,
-  r='0',
   onKeyPress,
-  zIn='0',
-  valid=true,
-  isSmall=false,
   isBig=false,
   
 

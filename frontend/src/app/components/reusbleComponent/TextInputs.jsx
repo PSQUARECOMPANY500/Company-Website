@@ -25,11 +25,7 @@ const TextInputs = ({
   
 
 }) => {
-
-
   const [mobileSize,setIsMobileSize]=useState(false);
-
-
   useEffect(()=>{
     const checkMobileSize=()=>{
   setIsMobileSize(window.innerWidth<=599)
@@ -54,7 +50,7 @@ const TextInputs = ({
         type={type}
         name={name}
         id={name}
-        // autoComplete={name}
+
         onChange={onChange}
         readOnly={read}
         value={value}

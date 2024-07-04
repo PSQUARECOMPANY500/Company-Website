@@ -20,11 +20,11 @@ const Industry = () => {
       </div>
       <div className='industy-content-container' >
         <div className='industy-content-container-left'>
-          <p style={{ textAlign: 'start' }}><span className='dot'></span>We recognize businesses often struggle with inadequate software and lack the necessary  knowledge, so we analyze and identify their specific requirements.
+          <p style={{ textAlign: 'start' }}><span className='dot'></span>We recognize businesses often struggle with inadequate software and lack the necessary  knowledge&apos; so we analyze and identify their specific requirements.
 
           </p>
 
-          <p style={{ textAlign: 'start' }}><span className='dot'></span>We develop custom ERP software designed to  meet each business's unique needs, ensuring seamless integration and enhanced efficiency. </p>
+          <p style={{ textAlign: 'start' }}><span className='dot'></span>We develop custom ERP software designed to  meet each business&apos;s unique needs, ensuring seamless integration and enhanced efficiency. </p>
         </div>
         <div className='industy-content-container-right' >
           <p style={{ textAlign: 'start' }}><span className='dot'></span>Our team of seasoned professionals brings extensive knowledge and experience in ERP systems.</p>

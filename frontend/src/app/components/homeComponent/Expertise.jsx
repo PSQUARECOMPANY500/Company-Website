@@ -8,7 +8,6 @@ import { useGSAP } from '@gsap/react'
 
 const Expertise = () => {
   const bgLineRef = useRef();
-  const cardRefs = useRef([]);
   
   useGSAP(
     () => {

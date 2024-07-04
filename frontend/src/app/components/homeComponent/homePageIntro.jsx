@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 
-const homePageIntro = () => {
+const HomePageIntro = () => {
   
   
   return (
@@ -31,4 +31,4 @@ const homePageIntro = () => {
   )
 }
 
-export default homePageIntro
+export default HomePageIntro

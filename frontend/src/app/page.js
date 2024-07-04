@@ -1,62 +1,34 @@
 "use client"
-import Image from "next/image";
 import styles from "./page.module.css";
-// import locomotiveScroll from 'locomotive-scroll'
 import { useRef, useEffect, useState } from 'react'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
-import HomePage from "./components/homeComponent/homePage";
-import dynamic from 'next/dynamic';
-
-
-
-const LocomotiveScroll = dynamic(() => import('locomotive-scroll'), { ssr: false });
-
-
+import HomePage from "./components/homeComponent/HomePage";
 
 
 gsap.registerPlugin(useGSAP);
 
 
-
-
-
 export default function Home() {
 
 
-  const scrollRef = useRef(null);
   const hRef = useRef();
 
- 
 
 
 
     useEffect(() => {
-      let locomotiveScroll;
-  
-      const initLocomotiveScroll = async () => {
-        try {
-          const LocomotiveScrollModule = await import('locomotive-scroll');
-          locomotiveScroll = new LocomotiveScrollModule.default({
-            el: document.querySelector('#main'),
-            smooth: true,
-          });
-        } catch (error) {
-          console.error('Error importing LocomotiveScroll:', error);
-        }
-      };
-  
-      if (typeof window !== 'undefined') {
-        initLocomotiveScroll();
+      async function getLocomotive() {
+        const Locomotive = (await import("locomotive-scroll")).default;
+        const scroll = new Locomotive({
+          el: document.querySelector('#main'),
+          smooth: true,
+        });
       }
   
-     
-      return () => {
-        if (locomotiveScroll) locomotiveScroll.destroy();
-      };
+      getLocomotive();
     }, []);
-
  
   useGSAP(
 
@@ -135,19 +107,7 @@ export default function Home() {
         }
       })
   
-      // gsap.to('.intro-container-overlay', {
-      //   duration: 1,
-      //   ease: "power1.out",
-      //   stagger: 0.2,
-      //   scrollTrigger: {
-      //     trigger: '.intro-container-overlay',
-      //     start: "top top",
-      //     end: `bottom top`,
-      //     scrub: 2,
-      //     pin: true, 
   
-      //   },
-      // })
   
   
   
@@ -245,8 +205,6 @@ export default function Home() {
   return (
     <main className={styles.main} id='main' ref={hRef}>
       <HomePage />
-
-
     </main>
   );
 }

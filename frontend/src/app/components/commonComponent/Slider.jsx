@@ -1,5 +1,5 @@
+'use client'
 import React, { useEffect, useState } from 'react'
-import sliderArrow from '../../../../public/Images/sliderArrow.png'
 import Image from 'next/image';
 
 const Slider = ({sliderHeading,scrollToNext,calculateWidth}) => {
@@ -25,9 +25,11 @@ return()=>{
         <div className='slider-overlay' style={{height:scrollHeight+'%'}}></div>
         <h1 >{sliderHeading}</h1>
         <Image 
-        src={sliderArrow }
+        src='/Images/sliderArrow.png'
         alt='slider arrow '
         onClick={scrollToNext}
+        height={35}
+        width={10}
         style={{cursor:'pointer',marginTop:'0.5rem'}}
         />
         

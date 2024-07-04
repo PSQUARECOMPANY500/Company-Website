@@ -1,5 +1,5 @@
+'use client'
 import React from 'react'
-import scrollPng from '../../../../public/Images/scrollTop.png'
 import Image from 'next/image'
 
 const ScrollToTop = () => {
@@ -11,13 +11,12 @@ const ScrollToTop = () => {
 
    <div className='scroll-top-circle cursor-pointer'  >
    <Image
-   src={scrollPng}
-   alt='shshs'
+   src='/Images/scrollTop.png'
+   alt='psqr scrollTop'
    height={45}
    width={20}
    className='cursor-pointer'
 
-  
    />
    
 
