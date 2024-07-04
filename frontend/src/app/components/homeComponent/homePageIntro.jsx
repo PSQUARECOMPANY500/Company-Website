@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 
-const homePageIntro = () => {
+const HomePageIntro = () => {
   
   
   return (
@@ -10,20 +10,25 @@ const homePageIntro = () => {
 
         <div className='intro-heading-wrapper'>
             <h1 >
+           <span className='simple'>
            Simplifying
+           </span>
               <br/><span className='heading-span'>Business Softwares</span></h1>
         </div>
+
         <div className='intro-pera-wrapper'>
             <p className='intropera'>“ Software is meant to make our lives simpler, not complex <span>“</span></p>
-         
+    
         <div className='intro-sub-pera-wrapper'>
        <p className='introsubpera'> ~Prabhjot Singh, Co-founder</p>
         </div>
         </div>
   
       </div>
+
+
     </div>
   )
 }
 
-export default homePageIntro
+export default HomePageIntro

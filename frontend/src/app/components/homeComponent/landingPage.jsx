@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 
 
 
-const landingPage = () => {
+const LandingPage = () => {
 
 
 
@@ -16,4 +16,4 @@ const landingPage = () => {
     )
 }
 
-export default landingPage
+export default LandingPage

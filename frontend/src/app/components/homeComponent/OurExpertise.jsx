@@ -1,11 +1,5 @@
+'use client'
 import React from 'react'
-import ReactNative from '../../../../public/Images/ReactNativeImg.png'
-import Flutter from '../../../../public/Images/FlutterImg.png'
-import JavaImg from '../../../../public/Images/JavaImg.png'
-import KotlinImg from '../../../../public/Images/KotlinImg.png'
-import MongoImg from '../../../../public/Images/MongoImg.png'
-import ExpressImg from '../../../../public/Images/ExpressImg.png'
-import NodeImg from '../../../../public/Images/NodeImg.png'
 import Image from 'next/image'
 
 
@@ -29,44 +23,43 @@ const OurExpertise = () => {
             <div className='expertise-card-container'>
                 <div className='expertise-card-container-top'>
                     <div className='expertise-card'>
-                        <Image src={ReactNative} alt='psqr  native' className='product-img'/>
+                        <Image src='/Images/ReactNativeImg.png' alt='psq native' className='expertise-img' height={200} width={100} style={{height:'10vw',width:'10vw'}}/>
                         <h5>React <br/> Native</h5>
                     </div>
                     <div className='expertise-card'>
-                        <Image src={Flutter} alt='psqr flutter'  className='product-img' />
+                        <Image src='/Images/FlutterImg.png' alt='psqr flutter'  className='expertise-img' height={200} width={100} style={{height:'10vw',width:'10vw'}} />
                         <h5>Flutter</h5>
                     </div>
                     <div className='expertise-card'>
-                        <Image src={JavaImg} alt='psqr  java'  className='product-img' />
+                        <Image src='/Images/JavaImg.png' alt='psqr  java'  className='expertise-img' height={200} width={100} style={{height:'10vw',width:'10vw'}} />
                         <h5>Java</h5>
                     </div>
                     <div className='expertise-card'>
-                        <Image src={KotlinImg} alt='psqr  Kotlin'  className='product-img'/>
+                        <Image src='/Images/KotlinImg.png' alt='psqr  Kotlin'  className='expertise-img' height={200} width={100} style={{height:'10vw',width:'10vw'}}/>
                         <h5>Kotlin</h5>
                     </div>
                 </div>
                 <div className='expertise-card-container-bottom'>
                     <div className='expertise-card'>
-                        <Image src={MongoImg} alt='psqr Mongo db'  className='product-img' />
+                        <Image src='/Images/MongoImg.png' alt='psqr Mongo db'  className='expertise-img'  height={200} width={100} style={{height:'10vw',width:'10vw'}} />
                         <h5>Mongo <br/> db</h5>
 
                     </div>
                     <div className='expertise-card'>
-                        <Image src={ExpressImg} alt='psqr Express'  className='product-img'/>
+                        <Image src='/Images/ExpressImg.png' alt='psqr Express'  className='expertise-img' height={200} width={100} style={{height:'10vw',width:'10vw'}}/>
                         <h5>Express <br/>.Js</h5>
 
                     </div>
                     <div className='expertise-card'>
-                        <Image src={NodeImg} alt='psqr Express'  className='product-img'/>
+                        <Image src='/Images/NodeImg.png' alt='psqr Express'  className='expertise-img' height={200} width={100} style={{height:'10vw',width:'10vw'}}/>
                         <h5>Node<br/>.Js</h5>
                     </div>
                     <div className='expertise-card'>
-                        <Image src={ReactNative} alt='psqr Express'  className='product-img' />
+                        <Image  src='/Images/ReactNativeImg.png' alt='psqr Express'  className='expertise-img' height={200} width={100} style={{height:'10vw',width:'10vw'}}/>
                         <h5> React<br/>.Js</h5>
 
                     </div>
                 </div>
-
             </div>
 
 

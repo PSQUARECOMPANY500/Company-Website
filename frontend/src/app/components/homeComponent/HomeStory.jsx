@@ -1,54 +1,72 @@
 
-import React, { useRef } from 'react'
+'use client'
+import React, { useRef, useState,useEffect } from 'react'
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
 
 
 const HomeStory = () => {
   const sectionRef = useRef();
   const triggerRef = useRef();
+
+
+
   useGSAP(() => {
-    const pin = gsap.fromTo(
-      sectionRef.current,
-      {
-        translateX: '100vw',
-      },
-      {
-        translateX: "-200vw",
-        ease: "none",
-        duration: 1.8,
+
+    let mm=gsap.matchMedia();
+
+    mm.add("(min-width: 800px)", () => {
+      const pin = gsap.fromTo(
+        sectionRef.current,
+        {
+          translateX: '100vw',
+        },
+        {
+          translateX: "-200vw",
+          ease: "none",
+          duration: 1.8,
+          scrollTrigger: {
+            trigger: triggerRef.current,
+            start: "top 20%",
+            end: "2000 -100%",
+            scrub: 2,
+            pin: true,
+  
+          },
+        }
+      );
+  
+      gsap.from('.bg-svg-wrapper', {
+        width: 0,
+        duration: 2,
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top 20%",
           end: "2000 -100%",
-          scrub: 2,
-          pin: true,
-    
-        },
-      }
-    );
-
-gsap.from('.bg-svg-wrapper', {
-      width: 0,
-      duration: 2,
-      scrollTrigger: {
-        trigger: triggerRef.current,
-        start: "top 20%",
-        end: "2000 -100%",
-        scrub: true,
-      }
-
-    })
-    return () => {
-      pin.kill();
-    };
-
+          scrub: true,
+        }
   
+      })
+      
+      return () => {
+        pin.kill();
+      };
+      
+      
+      
+    })
+
+ 
+    
+
+
   }, []);
+
+
+
   return (
     <div className='home-story-container' ref={triggerRef}>
-      {/* <h1 className='simplify'>Simplifying</h1> */}
+      <h1 className='simplify'>Simplifying</h1>
       <div className='bg-svg-wrapper'>
         <div className='sub-svg-wrapper'>
           <svg height="585" viewBox="0 0 1728 585" fill="none" xmlns="http://www.w3.org/2000/svg" className='bg-svg'>
@@ -64,48 +82,48 @@ gsap.from('.bg-svg-wrapper', {
         <div className='crouser-card'></div>
         <div className='crouser-card'></div>
       </div> */}
- 
-        <div ref={sectionRef} className="scroll-section-inner">
-          <div className="scroll-section">
-            <div className='crouser-card'>
-              <h1>Communication</h1>
-              <p>
+
+      <div ref={sectionRef} className="scroll-section-inner">
+        <div className="scroll-section">
+          <div className='crouser-card'>
+            <h1>Communication</h1>
+            <p>
               We employ experienced consultants within the industries where our clients operate. These consultants collaborate directly with our research and analysis team, which specializes in crafting tailored questionnaires with precise and pertinent inquiries. These questionnaires are uniquely designed for each client, enabling us to delve into the core of their challenges, address them effectively, and deliver enhanced solutions.
-              </p>
-            </div>
+            </p>
           </div>
-          <div className="scroll-section">
-            <div className='crouser-card'>
-              <h1>Interface</h1>
-              <p>Our bespoke business software, has an intuitive design that ensures that every user, regardless of their technical background, can seamlessly navigate and utilize the ERP system efficiently. We aim to minimize the learning curve and maximize productivity, empowering your team to leverage the full potential of the ERP platform effortlessly, contributing to a more productive and user-centric ERP experience for your company.</p>
-            </div>
+        </div>
+        <div className="scroll-section">
+          <div className='crouser-card'>
+            <h1>Interface</h1>
+            <p>Our bespoke business software, has an intuitive design that ensures that every user, regardless of their technical background, can seamlessly navigate and utilize the ERP system efficiently. We aim to minimize the learning curve and maximize productivity, empowering your team to leverage the full potential of the ERP platform effortlessly, contributing to a more productive and user-centric ERP experience for your company.</p>
           </div>
-          <div className="scroll-section">
-            <div className='crouser-card'>
-              <h1>Scalability</h1>
-              <p>The tailored nature of our solutions, shaped by a meticulous requirements analysis, and the latest tech that we use for development, allows the ERP software to seamlessly adapt to your unique business needs. With the agility provided by our software, your ERP system can efficiently scale with company growth and readily accommodate future changes, providing a dynamic and adaptable solution for sustained success.</p>
-            </div>
+        </div>
+        <div className="scroll-section">
+          <div className='crouser-card'>
+            <h1>Scalability</h1>
+            <p>The tailored nature of our solutions, shaped by a meticulous requirements analysis, and the latest tech that we use for development, allows the ERP software to seamlessly adapt to your unique business needs. With the agility provided by our software, your ERP system can efficiently scale with company growth and readily accommodate future changes, providing a dynamic and adaptable solution for sustained success.</p>
           </div>
-          <div className="scroll-section">
-            <div className='crouser-card'>
-              <h1>Integration</h1>
-              <p>The tailored nature of our solutions, shaped by a meticulous requirements analysis, and the latest tech that we use for development, allows the ERP software to seamlessly adapt to your unique business needs. With the agility provided by our software, your ERP system can efficiently scale with company growth and readily accommodate future changes, providing a dynamic and adaptable solution for sustained success.</p>
-            </div>
+        </div>
+        <div className="scroll-section">
+          <div className='crouser-card'>
+            <h1>Integration</h1>
+            <p>The tailored nature of our solutions, shaped by a meticulous requirements analysis, and the latest tech that we use for development, allows the ERP software to seamlessly adapt to your unique business needs. With the agility provided by our software, your ERP system can efficiently scale with company growth and readily accommodate future changes, providing a dynamic and adaptable solution for sustained success.</p>
           </div>
-          <div className="scroll-section">
-            <div className='crouser-card'>
-              <h1>Implementation</h1>
-              <p>The versatility of our technology, combined with our tailored approach, ensures that our ERP solution can easily integrate with various platforms, databases, and applications within your organization. This facilitates a cohesive and interconnected business environment, where data flows seamlessly across departments, promoting efficiency and informed decision-making. </p>
-            </div>
+        </div>
+        <div className="scroll-section">
+          <div className='crouser-card'>
+            <h1>Implementation</h1>
+            <p>The versatility of our technology, combined with our tailored approach, ensures that our ERP solution can easily integrate with various platforms, databases, and applications within your organization. This facilitates a cohesive and interconnected business environment, where data flows seamlessly across departments, promoting efficiency and informed decision-making. </p>
           </div>
-          <div className="scroll-section">
-            <div className='crouser-card'>
-              <h1>Training</h1>
-              <p>Through intuitive interfaces, interactive modules, and personalized training plans, we empower users with the knowledge and skills needed to navigate and leverage the full potential of our ERP systems effortlessly. Our commitment to user-friendly design and comprehensive support not only streamlines the training process but also fosters a culture of efficiency, allowing businesses to harness the true power of their ERP solutions from day one.</p>
-            </div>
+        </div>
+        <div className="scroll-section">
+          <div className='crouser-card'>
+            <h1>Training</h1>
+            <p>Through intuitive interfaces, interactive modules, and personalized training plans, we empower users with the knowledge and skills needed to navigate and leverage the full potential of our ERP systems effortlessly. Our commitment to user-friendly design and comprehensive support not only streamlines the training process but also fosters a culture of efficiency, allowing businesses to harness the true power of their ERP solutions from day one.</p>
           </div>
         </div>
       </div>
+    </div>
 
   )
 }
