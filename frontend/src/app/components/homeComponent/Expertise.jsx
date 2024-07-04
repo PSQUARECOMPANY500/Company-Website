@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef } from 'react'
+import React, { useRef ,useState,useEffect} from 'react'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react'
@@ -8,70 +8,75 @@ import { useGSAP } from '@gsap/react'
 
 const Expertise = () => {
   const bgLineRef = useRef();
-  const cardRefs = useRef([]);
+  
   useGSAP(
     () => {
- 
-      gsap.registerPlugin(ScrollTrigger);
-
-      gsap.from(bgLineRef.current, {
-        width: 0,
-
+      let mm=gsap.matchMedia();
+    
+      mm.add("(min-width: 800px)", () => {
+    
+        gsap.registerPlugin(ScrollTrigger);
+  
+        gsap.from(bgLineRef.current, {
+          width: 0,
+  
+          scrollTrigger: {
+            trigger: bgLineRef.current,
+            start: 'top 80%',
+            end: 'top 40%',
+            scrub: true,
+            ease: 'power4.in'
+          }
+  
+        })
+  
+  
+  const elements = ['.one', '.two', '.three', '.four'];
+  
+  
+  const calculatePositions = () => {
+    return [
+      { start: 'top 70%', end: 'top 20%' ,yValue:100},
+      { start: 'top 60%', end: 'top 20%',yValue:130 },
+      { start: 'top 50%', end: 'top 20%',yValue:160 },
+      { start: 'top 40%', end: 'top 20%', yValue: 180 }
+    ];
+  };
+  
+  
+  
+  
+  const initializeAnimations = () => {
+   
+  
+    const positions = calculatePositions();
+  
+    elements.forEach((el, index) => {
+     const animation= gsap.from(el, {
+        y: positions[index].yValue,
+        opacity: 0,
         scrollTrigger: {
-          trigger: bgLineRef.current,
-          start: 'top 80%',
-          end: 'top 40%',
+          trigger: '.section-five-card-container',
+          start: positions[index].start,
+          end: positions[index].end,
           scrub: true,
-          ease: 'power4.in'
         }
-
-      })
-
-
-const elements = ['.one', '.two', '.three', '.four'];
-
-
-const calculatePositions = () => {
-  return [
-    { start: 'top 70%', end: 'top 20%' ,yValue:100},
-    { start: 'top 60%', end: 'top 20%',yValue:130 },
-    { start: 'top 50%', end: 'top 20%',yValue:160 },
-    { start: 'top 40%', end: 'top 20%', yValue: 180 }
-  ];
-};
-
-
-
-
-const initializeAnimations = () => {
- 
-
-  const positions = calculatePositions();
-
-  elements.forEach((el, index) => {
-   const animation= gsap.from(el, {
-      y: positions[index].yValue,
-      opacity: 0,
-      scrollTrigger: {
-        trigger: '.section-five-card-container',
-        start: positions[index].start,
-        end: positions[index].end,
-        scrub: true,
+      });
+      return ()=>{
+        animation.kill();
       }
     });
-    return ()=>{
-      animation.kill();
-    }
-  });
-};
-
-
-initializeAnimations();
-
-window.addEventListener('resize', () => {
-  ScrollTrigger.refresh();
+  };
+  
+  
   initializeAnimations();
-});
+  
+  window.addEventListener('resize', () => {
+    ScrollTrigger.refresh();
+    initializeAnimations();
+  });
+      })
+   
 
 
 
@@ -80,6 +85,7 @@ window.addEventListener('resize', () => {
     }
     , [])
 
+ 
   return (
     <div className='home-section-five'>
       <div className='home-section-five-heading' style={{}} >
@@ -119,3 +125,15 @@ window.addEventListener('resize', () => {
 }
 
 export default Expertise
+
+
+
+
+
+
+
+
+
+
+
+

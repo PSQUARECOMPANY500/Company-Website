@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html,
@@ -45,7 +47,6 @@ body {
     font-size: 1.2vw;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-
     font-weight: 500;
     font-style: normal;
     cursor: pointer;
@@ -79,4 +80,28 @@ body {
 
 .nav-inner-container:hover h1 {
     display: initial;
+}
+
+
+@media only screen and (max-width: 599px) {
+
+    .nav-inner-container h1 {
+font-size: 11px;
+    }
+
+    .nav-inner-container {
+
+width: 100px;
+height: 100px;
+
+    }
+
+    .nav-inner-container h1:nth-child(1){
+        left: 2%;
+    }
+    .nav-inner-container h1:last-child{
+        left: 64%;
+    }
+
+
 }

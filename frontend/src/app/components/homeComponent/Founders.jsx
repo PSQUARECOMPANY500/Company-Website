@@ -1,23 +1,17 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
-import ArmaansSirImage from '../../../../public/Images/armaansir.png'
-import prabhSir from '../../../../public/Images/prabhSir.jpg'
-import rotateone from '../../../../public/Images/rotate1.png'
-import rotatetwo from '../../../../public/Images/rotate2.png'
+
 
 const Founders = () => {
     return (
-        <div className='founders' style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', flexDirection: 'column' }}>
+        <div className='founders'>
             <div className='founder-heading-wrapper' >
                 <h1>Founders</h1>
             </div>
-            <div className='founders-image-container' style={{
-                display: 'flex',
-                gap: '10rem',
-
-            }}>
+            <div className='founders-image-container' >
                 <div className='founders-img-card'>
-                    <Image src={prabhSir} alt='ceo of psqr' className='founders-img' />
+                    <Image src='/Images/prabhSir.jpg' alt='ceo of psqr' className='founders-img' width={1000} height={1000} style={{height:'80%',width:'100%'}} />
                     <div className='founders-name-container'>
                         <h5>Prabhjot Singh​​</h5>
                         <p>Co-Founder & CEO</p>
@@ -25,7 +19,7 @@ const Founders = () => {
 
                 </div>
                 <div className='founders-img-card'>
-                    <Image src={ArmaansSirImage} alt='ceo of psqr' className='founders-img' />
+                    <Image src='/Images/armaansir.JPG' alt='ceo of psqr' className='founders-img'  width={1000} height={1000} style={{height:'80%',width:'100%'}}/>
                     <div className='founders-name-container'>
                         <h5>Prabhsimran Singh​</h5>
                         <p>Co-Founder </p>
@@ -36,17 +30,22 @@ const Founders = () => {
             </div>
             <div className='founders-pera-wrapper'>
                 <Image
-                    src={rotateone}
+                  src='/Images/rotate1.png'
                     alt='psqr text'
                     className='rotate'
-                style={{marginLeft:'-4rem',marginBottom:'-2rem'}}
+                    height={10}
+                    width={10}
+                    style={{height:'1.5vw',width:'1.5vw'}}
                 />
                 <h2>We persevere until we attain perfection</h2>
                 <Image
-                    src={rotatetwo}
+                        src='/Images/rotate2.png'
                     alt='psqr text'
-                    className='rotate'
-                    style={{position: 'absolute',right:0,marginRight:'-4rem',marginTop:'-1rem'}}
+                    className='rotate rotate2'
+                    height={10}
+                    width={10}
+                    style={{height:'1.5vw',width:'1.5vw'}}
+
                 />
                 <h4 >~ Prabhsimran Singh, Co-founder</h4>
             </div>

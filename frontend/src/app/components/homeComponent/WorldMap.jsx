@@ -1,6 +1,5 @@
+'use client'
 import React from 'react'
-import mapImg from '../../../../public/Images/map.png'
-import mapImg1 from '../../../../public/Images/map1.png'
 import Image from 'next/image'
 
 const WorldMap = () => {
@@ -12,11 +11,18 @@ const WorldMap = () => {
 
       <div className='map-img-container'>  
         <Image
-        src={mapImg1}
+        src='/Images/map1.png'
         alt='psqr map'
         className='map-img'
+        height={1000}
+        width={1000}
+        style={{width: '100%'}}
         />
-        <Image src={mapImg} alt='psqr map' className='map-img1'/>
+        <Image src='/Images/map.png' alt='psqr map' className='map-img1'
+                height={1000}
+                width={1000}
+                style={{width:'100%'}}
+        />
       </div>
     </div>
   )

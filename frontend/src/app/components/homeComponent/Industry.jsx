@@ -3,7 +3,7 @@ import React from 'react'
 
 const Industry = () => {
   return (
-    <div className='industry' style={{ minHeight: '130vh', width: '100%', backgroundColor: '#ECE7E1', display: 'flex', alignItems: 'center', justifyContent: 'space-around', flexDirection: 'column' }}>
+    <div className='industry'>
       <div className='industry-video-container' style={{ width: '90%', height: '45vh', position: 'relative', }}>
         <video
           width="100%"
@@ -18,19 +18,19 @@ const Industry = () => {
         </video>
 
       </div>
-      <div className='industy-content-container' style={{ width: '100%', display: 'flex', justifyContent: 'space-between', height: '45vh', position: 'relative', }}>
-        <div className='industy-content-container-left' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around', height: '100%', width: '50%', padding: '3rem', paddingLeft: '5rem' }}>
-          <p style={{ textAlign: 'start' }}><span className='dot' style={{ height: '4px', width: '4px', backgroundColor: 'black', borderRadius: '50%', position: 'absolute', marginTop: '1.2rem', marginLeft: '-1rem' }}></span>We recognize businesses often struggle with <br/>inadequate software and lack the necessary <br/> knowledge, so we analyze and identify their <br/>specific requirements.
+      <div className='industy-content-container' >
+        <div className='industy-content-container-left'>
+          <p style={{ textAlign: 'start' }}><span className='dot'></span>We recognize businesses often struggle with inadequate software and lack the necessary  knowledge&apos; so we analyze and identify their specific requirements.
 
           </p>
 
-          <p style={{ textAlign: 'start' }}><span className='dot' style={{ height: '4px', width: '4px', backgroundColor: 'black', borderRadius: '50%', position: 'absolute', marginTop: '1.2rem', marginLeft: '-1rem' }}></span>We develop custom ERP software designed to <br/> meet each business's unique needs, ensuring <br/> seamless integration and enhanced efficiency. </p>
+          <p style={{ textAlign: 'start' }}><span className='dot'></span>We develop custom ERP software designed to  meet each business&apos;s unique needs, ensuring seamless integration and enhanced efficiency. </p>
         </div>
-        <div className='industy-content-container-right' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around', height: '100%', width: '50%', padding: '3rem' }}>
-          <p style={{ textAlign: 'start' }}><span className='dot' style={{ height: '4px', width: '4px', backgroundColor: 'black', borderRadius: '50%', position: 'absolute', marginTop: '1.2rem', marginLeft: '-1rem' }}></span>Our team of seasoned professionals brings <br/>extensive knowledge and experience in ERP <br/> systems.</p>
+        <div className='industy-content-container-right' >
+          <p style={{ textAlign: 'start' }}><span className='dot'></span>Our team of seasoned professionals brings extensive knowledge and experience in ERP systems.</p>
 
-          <p style={{ textAlign: 'start' }}><span className='dot' style={{ height: '4px', width: '4px', backgroundColor: 'black', borderRadius: '50%', position: 'absolute', marginTop: '1.2rem', marginLeft: '-1rem' }}></span>
-            By equipping businesses with the right tools and <br/>knowledge, we enable greater productivity, <br/>efficiency, and long-term growth, acting as <br/> strategic partners to maintain their competitive <br/>edge. </p>
+          <p style={{ textAlign: 'start' }}><span className='dot'></span>
+            By equipping businesses with the right tools and knowledge, we enable greater productivity, efficiency, and long-term growth, acting as strategic partners to maintain their competitive edge. </p>
         </div>
       </div>
     </div>
