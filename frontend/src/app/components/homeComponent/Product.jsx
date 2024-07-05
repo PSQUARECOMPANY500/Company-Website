@@ -1,11 +1,27 @@
 'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react'
 
 const Product = () => {
+  const [mobileSize,setIsMobileSize]=useState(false);
+  useEffect(()=>{
+    const checkMobileSize=()=>{
+  setIsMobileSize(window.innerWidth<=599)
+    }
+
+    checkMobileSize()
+
+    window.addEventListener('resize', checkMobileSize);
+
+    return ()=>{
+      window.removeEventListener('resize', checkMobileSize);
+    }
+  
+},[])
+
 
   useGSAP(
     () => {
@@ -102,7 +118,7 @@ const Product = () => {
         <div className='product-card-wrapper onepr'>
           <div className='product-card '>
 
-            <Image src='/Images/AI.png' alt='psqr Ai Card' className='product-img' height={100} width={100} style={{height:'10vw',width:'10vw'}}/>
+            <Image src='/Images/AI.png' alt='psqr Ai Card' className='product-img' height={100} width={100} style={{height:mobileSize?'22vw':'10vw',width:mobileSize?'22vw':'10vw'}}/>
             <p >Industry 4.0</p>
           </div>
           <p >Industry 4.0</p>
@@ -110,14 +126,14 @@ const Product = () => {
         <div className='product-card-wrapper twopr'>
 
           <div className='product-card'>
-            <Image src='/Images/publicService.png'  alt='psqr Ai Card' className='product-img'  height={100} width={100} style={{height:'10vw',width:'10vw'}}/>
+            <Image src='/Images/publicService.png'  alt='psqr Ai Card' className='product-img'  height={100} width={100} style={{height:mobileSize?'22vw':'10vw',width:mobileSize?'22vw':'10vw'}}/>
             <p>Service Management</p>
           </div>
           <p>Service Management</p>
         </div>
         <div className='product-card-wrapper threepr'>
           <div className='product-card'>
-            <Image src='/Images/sales.png'  alt='psqr Ai Card' className='product-img'  height={100} width={100} style={{height:'10vw',width:'10vw'}} />
+            <Image src='/Images/sales.png'  alt='psqr Ai Card' className='product-img'  height={100} width={100} style={{height:mobileSize?'22vw':'10vw',width:mobileSize?'22vw':'10vw'}} />
             <p>Sales</p>
           </div>
           <p>Sales</p>

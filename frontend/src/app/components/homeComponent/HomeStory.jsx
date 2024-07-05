@@ -3,6 +3,7 @@
 import React, { useRef, useState,useEffect } from 'react'
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 const HomeStory = () => {
@@ -12,7 +13,7 @@ const HomeStory = () => {
 
 
   useGSAP(() => {
-
+    gsap.registerPlugin(ScrollTrigger);
     let mm=gsap.matchMedia();
 
     mm.add("(min-width: 800px)", () => {
@@ -107,13 +108,13 @@ const HomeStory = () => {
         <div className="scroll-section">
           <div className='crouser-card'>
             <h1>Integration</h1>
-            <p>The tailored nature of our solutions, shaped by a meticulous requirements analysis, and the latest tech that we use for development, allows the ERP software to seamlessly adapt to your unique business needs. With the agility provided by our software, your ERP system can efficiently scale with company growth and readily accommodate future changes, providing a dynamic and adaptable solution for sustained success.</p>
+            <p>The versatility of our technology, combined with our tailored approach, ensures that our ERP solution can easily integrate with various platforms, databases, and applications within your organization. This facilitates a cohesive and interconnected business environment, where data flows seamlessly across departments, promoting efficiency and informed decision-making.</p>
           </div>
         </div>
         <div className="scroll-section">
           <div className='crouser-card'>
             <h1>Implementation</h1>
-            <p>The versatility of our technology, combined with our tailored approach, ensures that our ERP solution can easily integrate with various platforms, databases, and applications within your organization. This facilitates a cohesive and interconnected business environment, where data flows seamlessly across departments, promoting efficiency and informed decision-making. </p>
+            <p>We ensure a seamless and risk-free implementation process. Leveraging agile methodologies and phased rollout strategies, we mitigate potential challenges by introducing the ERP system gradually, allowing for real-time adjustments and user feedback.This iterative approach, combined with a robust change management strategy, eliminates any chance of implementation failure, ensuring a smooth and successful integration of our ERP solution into your business processes. </p>
           </div>
         </div>
         <div className="scroll-section">

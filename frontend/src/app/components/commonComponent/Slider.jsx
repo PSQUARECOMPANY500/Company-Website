@@ -30,7 +30,7 @@ return()=>{
         onClick={scrollToNext}
         height={35}
         width={10}
-        style={{cursor:'pointer',marginTop:'0.5rem'}}
+        style={{cursor:'pointer',marginTop:'0rem'}}
         />
         
     </div>

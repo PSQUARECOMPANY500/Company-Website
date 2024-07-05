@@ -7,18 +7,16 @@ import { useGSAP } from '@gsap/react';
 import HomePage from "./components/homeComponent/HomePage";
 
 
-gsap.registerPlugin(useGSAP);
-
 
 export default function Home() {
-
-
+  
+  
   const hRef = useRef();
-
-
-
-
-    useEffect(() => {
+  
+  
+  
+  
+  useEffect(() => {
       async function getLocomotive() {
         const Locomotive = (await import("locomotive-scroll")).default;
         const scroll = new Locomotive({
@@ -26,17 +24,16 @@ export default function Home() {
           smooth: true,
         });
       }
-  
+      
       getLocomotive();
     }, []);
+    
+    gsap.registerPlugin(useGSAP);
  
   useGSAP(
-
     () => {
-
       let mm = gsap.matchMedia();
       gsap.registerPlugin(ScrollTrigger);
-
 
       mm.add("(min-width: 800px)", () => {
         
@@ -108,11 +105,6 @@ export default function Home() {
       })
   
   
-  
-  
-  
-  
-  
       gsap.to('.introsubpera', {
         duration: 1,
         ease: "power1.out",
@@ -123,10 +115,10 @@ export default function Home() {
           start: "top bottom",
           end: 'top 80%',
           scrub: 2,
-  
-  
         },
       });
+
+
       gsap.to('.intropera', {
         duration: 1,
         ease: "power1.out",

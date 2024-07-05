@@ -135,6 +135,9 @@ const HomePage = () => {
           <h1 onClick={scrollToProd} >Our Products</h1>
         </div>
       </div>
+      <div className='scroll-animatiomn' ref={storyRef}>
+        <Story />
+      </div>
       <div className='scroll-animatiomn'
       ref={landingpageRef}>
         <LandingPage />
@@ -156,9 +159,6 @@ const HomePage = () => {
       </div>
       <div className='scroll-animatiomn'  ref={produtref}>
         < Product />
-      </div>
-      <div className='scroll-animatiomn' ref={storyRef}>
-        <Story />
       </div>
       <div className='scroll-animatiomn' ref={contactRef} >
         <Contact />

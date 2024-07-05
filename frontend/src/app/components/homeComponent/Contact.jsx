@@ -41,7 +41,7 @@ const Contact = () => {
       }
 
 
-      const { data } = axios.post('http://127.0.0.1:8000/api/contact/contact-us', { name: userData.firstName, email: userData.email, projectDesc: userData.project, budget: userData.budget })
+      const { data } = axios.post('https://psquarecompany.com/api/contact/contact-us', { name: userData.firstName, email: userData.email, projectDesc: userData.project, budget: userData.budget })
       setUserData({
         firstName: '',
         email: '',
@@ -140,8 +140,7 @@ const Contact = () => {
           (
 
             <>
-
-              <Image ssrc='/Images/MessageIcon2.png' alt='psqr logo' className='msg-icon2' height={35} width={35} />
+ {/* <Image src='/Images/msgIcon.png' alt='psqr logo' className='msg-icon' height={35} width={35}/> */}
               <span className='msg2'>Message Sent Successfully </span>
             </>
           )}

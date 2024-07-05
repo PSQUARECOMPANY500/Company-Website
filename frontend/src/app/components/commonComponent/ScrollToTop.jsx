@@ -15,7 +15,7 @@ const ScrollToTop = () => {
    alt='psqr scrollTop'
    height={45}
    width={20}
-   className='cursor-pointer'
+   className='cursor-pointer scroll-png'
 
    />
    

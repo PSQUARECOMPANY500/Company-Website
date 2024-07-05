@@ -21,7 +21,9 @@
   font-weight: 700;
   color: #ECE7E1;
   z-index: 999;
-  opacity: 0;
+ 
+ 
+
 
 
 }
@@ -783,7 +785,7 @@ align-items: center;
 }
 
 /* ----------------------------------------------------------------------------------------------------------------old version of story card------------------------------------------------------------------------------------------------------------------------------------------- */
-
+/* 
 .story-container {
   height: 100vh;
   width: 100%;
@@ -796,10 +798,10 @@ align-items: center;
   width: 10vw;
 }
 
-/* .expertise-img {
+.expertise-img {
   height: 10vw;
   width: 10vw;
-} */
+}
 
 .story-bg-img {
   height: 100%;
@@ -927,13 +929,13 @@ align-items: center;
   background-color: #330152;
   border-radius: 10px;
 
-}
+} */
 
 /* ----------------------------------------------------------------------------------------------------------------end old version of story card------------------------------------------------------------------------------------------------------------------------------------------- */
 
 
 /* ----------------------------------------------------------------------------------------------------------------new version of story card------------------------------------------------------------------------------------------------------------------------------------------- */
-/* 
+
 .story-container {
   height: 100vh;
   width: 100%;
@@ -979,10 +981,10 @@ align-items: center;
 
 }
 
-.stroy-card {
+.story-card {
   width: 38vw;
   height: 18vw;
-  background-color: #f3f1ef41;
+  background-color: #f3f1ef;
   position: absolute;
   box-shadow: 2px 4px 15px 0px #95928E80;
   border-radius: 50px;
@@ -991,11 +993,13 @@ align-items: center;
   align-items: flex-start;
   justify-content: space-around;
   flex-direction: column;
+
   
 
 }
 
-.stroy-card p {
+
+.story-card p {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -1006,7 +1010,7 @@ align-items: center;
   text-align: start;
 }
 
-.stroy-card h5 {
+.story-card h5 {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -1017,7 +1021,7 @@ align-items: center;
   text-align: start;
 }
 
-.stroy-card-progress {
+.story-card-progress {
   height: 0.3rem;
   width: 20vw;
   background-color: #FFFFFF;
@@ -1066,10 +1070,10 @@ align-items: center;
 .story-card-inner-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 2.5rem;
-
+  justify-content: center;
+  gap: 1rem;
 }
+
 
 
 .story-card-progress-overlay {
@@ -1079,7 +1083,7 @@ align-items: center;
   background-color: #330152;
   border-radius: 10px;
 
-} */
+}
 
 /* ----------------------------------------------------------------------------------------------------------------end of new version of story card------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -2137,6 +2141,10 @@ width: 350px;
   }
 
   .slider{
+    display: none;
+  }
+
+  .scroll-to-top{
     display: none;
   }
 }
