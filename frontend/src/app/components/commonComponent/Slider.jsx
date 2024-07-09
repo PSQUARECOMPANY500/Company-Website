@@ -1,25 +1,20 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
+import { progress } from 'framer-motion';
 
-const Slider = ({sliderHeading,scrollToNext,calculateWidth}) => {
-
-  const[scrollHeight,setScrollHeight] =useState(0);
-  useEffect(()=>{
-    const scrollHandler=()=>{
-const windowHeight = window.innerHeight;
-const documentHeight = document.documentElement.scrollHeight;
-const scrollY=window.scrollY;
-const scrollPercent=(scrollY/(documentHeight-windowHeight))*100
-setScrollHeight(scrollPercent)
+const Slider = ({scrollToNext,progressbar}) => {
+  const[scrollHeight,setScrollHeight] = useState();
+  const[sliderHeading,setSliderHeading] = useState();
   
-    }
-    window.addEventListener('scroll',scrollHandler)
+useEffect(() =>{
+  Object.entries(progressbar).forEach((e)=>{
+    setScrollHeight(e[1])
+    setSliderHeading(e[0])
+    })
+    
+},[progressbar])
 
-return()=>{
-  window.removeEventListener('scroll',scrollHandler)
-}
-  })
   return (
     <div className='slider'>
         <div className='slider-overlay' style={{height:scrollHeight+'%'}}></div>
@@ -27,12 +22,12 @@ return()=>{
         <Image 
         src='/Images/sliderArrow.png'
         alt='slider arrow '
-        onClick={scrollToNext}
+        onClick={scrollToNext} 
         height={35}
         width={10}
         style={{cursor:'pointer',marginTop:'0rem'}}
         />
-        
+     
     </div>
   )
 }

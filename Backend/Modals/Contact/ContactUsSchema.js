@@ -36,7 +36,7 @@ ContactUsSchema.post("save", async (doc, next) => {
     budget: ${doc.budget}
   `
 
-    await mailSender(doc.email, message, process.env.EmailAddress, "Contact Us");
+    // await mailSender(doc.email, message, process.env.EmailAddress, "Contact Us");
     next();
   } catch (error) {
     console.log(error);

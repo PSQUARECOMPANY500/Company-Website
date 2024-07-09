@@ -30,6 +30,8 @@ const HomePage = () => {
   const [isVisible, setIsVisible] = useState({})
   const [sliderHeading, setSliderHeading] = useState(null);
   const [calculateWidth, setcalCulateWidth] = useState();
+  const[progressbar,setProprogressbar]=useState(0);
+  const [progress, setProgress] = useState({});
 
 
 
@@ -51,7 +53,6 @@ const HomePage = () => {
     ];
 
     const el = refss.filter((elem) => {
-      console.log(sliderHeading)
       if (elem.id === sliderHeading) {
         console.log(elem.ref1.current)
         elem.ref1.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -81,7 +82,7 @@ const HomePage = () => {
   };
 
   useEffect(() => {
-    
+  
     const refs = [
       { ref: landingpageRef, id: 'landingpage' },
       { ref: homeIntroRef, id: 'our story' },
@@ -126,6 +127,48 @@ const HomePage = () => {
     })
   }, [isVisible]);
 
+
+  useEffect(() => {
+    const calculateScrollProgress = () => {
+      const refs = [
+        { ref: landingpageRef, id: 'landingpage' },
+        { ref: homeIntroRef, id: 'our story' },
+        { ref: homeStoryRef, id: 'our expertise'},
+        { ref: ourExpertiseRef, id: 'our products'},
+        { ref: produtref, id: 'testimonials'},
+        { ref: storyRef, id: 'contact us' },
+        { ref: contactRef, id: 'co' },
+        
+      ];
+
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      refs.forEach(({ ref, id }) => {
+        const section = ref.current;
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          const sectionTop = rect.top + scrollTop-30;
+          const sectionHeight = rect.height-30;
+
+          if (scrollTop >= sectionTop && scrollTop < sectionTop + sectionHeight) {
+            const progressWithinSection = ((scrollTop - sectionTop) / sectionHeight) * 100;
+            setProgress(prevProgress => ({
+              [id]: progressWithinSection,
+            }));
+          }
+        }
+      });
+    };
+
+
+    console.log(progress)
+    window.addEventListener('scroll', calculateScrollProgress);
+    return () => {
+      window.removeEventListener('scroll', calculateScrollProgress);
+    };
+  }, [landingpageRef, homeIntroRef, homeStoryRef, ourExpertiseRef, produtref, storyRef, contactRef]);
+
+
   return (
     <div  >
       <div className='nav-container' style={{ position: 'fixed', zIndex: '99' }}>
@@ -134,9 +177,6 @@ const HomePage = () => {
           <Image src={logo} alt='logo psqr' height={53} width={53} className='psqr-logo' />
           <h1 onClick={scrollToProd} >Our Products</h1>
         </div>
-      </div>
-      <div className='scroll-animatiomn' ref={storyRef}>
-        <Story />
       </div>
       <div className='scroll-animatiomn'
       ref={landingpageRef}>
@@ -160,10 +200,13 @@ const HomePage = () => {
       <div className='scroll-animatiomn'  ref={produtref}>
         < Product />
       </div>
+      <div className='scroll-animatiomn' ref={storyRef}>
+        <Story />
+      </div>
       <div className='scroll-animatiomn' ref={contactRef} >
         <Contact />
       </div>
-      {sliderHeading !== null && sliderHeading !== 'landingpage' && sliderHeading !== 'co' && <Slider sliderHeading={sliderHeading} scrollToNext={scrollToNext} calculateWidth={calculateWidth} /> }
+      {sliderHeading !== null && sliderHeading !== 'landingpage' && sliderHeading !== 'co' && <Slider  scrollToNext={scrollToNext} calculateWidth={calculateWidth} progressbar={progress}/> }
        {sliderHeading === 'co'&& <ScrollToTop/>}
     </div>
   )

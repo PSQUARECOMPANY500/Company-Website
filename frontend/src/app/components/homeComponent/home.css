@@ -773,7 +773,6 @@ align-items: center;
 }
 
 .product-card-wrapper p {
-
   font-size: 2vw;
   color: #000000DE;
   font-family: "Montserrat", sans-serif;
@@ -783,155 +782,6 @@ align-items: center;
   text-align: center;
   margin-top: 1.5rem;
 }
-
-/* ----------------------------------------------------------------------------------------------------------------old version of story card------------------------------------------------------------------------------------------------------------------------------------------- */
-/* 
-.story-container {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.product-img {
-  height: 10vw;
-  width: 10vw;
-}
-
-.expertise-img {
-  height: 10vw;
-  width: 10vw;
-}
-
-.story-bg-img {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  object-fit: cover;
-  object-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.data-container {
-  height: 90%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 3rem;
-}
-
-.bg-story {
-  height: 100%;
-  width: 100%;
-
-
-}
-
-.stroy-card {
-  width: 38vw;
-  height: 18vw;
-  background-color: #F3F1EF4D;
-  position: relative;
-  box-shadow: 2px 4px 15px 0px #95928E80;
-  border-radius: 50px;
-  padding: 2rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  flex-direction: column;
-}
-
-.stroy-card p {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.2vw;
-  color: #000000;
-  line-height: 1.4vw;
-  text-align: start;
-}
-
-.stroy-card h5 {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: italic;
-  font-size: 1.2vw;
-  color: #000000;
-  line-height: 1.4vw;
-  text-align: start;
-}
-
-.stroy-card-progress {
-  height: 0.3rem;
-  width: 20vw;
-  background-color: #FFFFFF;
-  margin: 1rem;
-  border-radius: 10px;
-  position: relative;
-}
-
-.story-heading-wrapper {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.story-heading-wrapper h1 {
-  font-size: 4vw;
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: #000000DE;
-  line-height: 5vw;
-}
-
-.story-heading-wrapper h2 {
-  font-size: 2vw;
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  letter-spacing: 2px;
-}
-
-.story-card-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  position: relative;
-
-}
-
-.story-card-inner-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2.5rem;
-
-}
-
-
-.story-card-progress-overlay {
-  position: absolute;
-  height: 100%;
-  width: 30%;
-  background-color: #330152;
-  border-radius: 10px;
-
-} */
-
-/* ----------------------------------------------------------------------------------------------------------------end old version of story card------------------------------------------------------------------------------------------------------------------------------------------- */
 
 
 /* ----------------------------------------------------------------------------------------------------------------new version of story card------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -981,21 +831,73 @@ align-items: center;
 
 }
 
-.story-card {
-  width: 38vw;
-  height: 18vw;
+
+
+
+.story-cards {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-card{
+  width: 35vw;
+  height: 15vw;
   background-color: #f3f1ef;
   position: absolute;
-  box-shadow: 2px 4px 15px 0px #95928E80;
+  box-shadow: 2px 4px 15px 0px #95928e80;
   border-radius: 50px;
   padding: 2rem;
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
   flex-direction: column;
+  pointer-events: none;
+  opacity: 0;
+  animation: animate 15s infinite linear;
+  animation-delay: calc((3s * var(--delay)));
 
-  
+}
 
+.outer:hover .story-card {
+  animation-play-state: paused;
+}
+.story-card:last-child {
+  animation-delay: calc(-3s * var(--delay));
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(100%) scale(0.5);
+  }
+  5%,
+  20% {
+    opacity: 0.4;
+    transform: translateY(100%) scale(0.7);
+  }
+  25%,
+  40% {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0%) scale(1);
+  }
+  45%,
+  60% {
+    opacity: 0.4;
+    transform: translateY(-100%) scale(0.7);
+  }
+  65%,
+  100% {
+    opacity: 0;
+    transform: translateY(-100%) scale(0.5);
+  }
 }
 
 
@@ -2027,6 +1929,8 @@ align-items: center;
   }
 
   .stroy-card {
+
+
 
     width: 340px;
     height: 240px;
